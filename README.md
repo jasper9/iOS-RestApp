@@ -1,3 +1,7 @@
+This is my HelloWorld iOS app.
+
+This app does GET requests to the chuck norris database (http://www.icndb.com)
+
 
 Credits 
 
