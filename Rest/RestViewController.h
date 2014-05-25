@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RestViewController : UIViewController
+@interface RestViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UILabel *greetingId;
+@property (nonatomic, strong) IBOutlet UILabel *greetingContent;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)fetchGreeting;
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C50BDF1193038560005C7C3 /* Joke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF0193038560005C7C3 /* Joke.m */; };
+		0C50BDF51930394B0005C7C3 /* JokeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */; };
+		0C50BDFC1932A5E20005C7C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C50BDFB1932A5E20005C7C3 /* README.md */; };
 		0CB102EC192DB58B006824EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EB192DB58B006824EB /* Foundation.framework */; };
 		0CB102EE192DB58B006824EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102ED192DB58B006824EB /* CoreGraphics.framework */; };
 		0CB102F0192DB58B006824EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EF192DB58B006824EB /* UIKit.framework */; };
@@ -21,6 +24,7 @@
 		0CB1030D192DB58B006824EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EF192DB58B006824EB /* UIKit.framework */; };
 		0CB10315192DB58B006824EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CB10313192DB58B006824EB /* InfoPlist.strings */; };
 		0CB10317192DB58B006824EB /* RestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB10316192DB58B006824EB /* RestTests.m */; };
+		0CB10321192DB7D5006824EB /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0CB10320192DB7D5006824EB /* readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C50BDEF193038560005C7C3 /* Joke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joke.h; sourceTree = "<group>"; };
+		0C50BDF0193038560005C7C3 /* Joke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Joke.m; sourceTree = "<group>"; };
+		0C50BDF2193038CB0005C7C3 /* JokeSvc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JokeSvc.h; sourceTree = "<group>"; };
+		0C50BDF31930394B0005C7C3 /* JokeSvcCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcCache.h; sourceTree = "<group>"; };
+		0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcCache.m; sourceTree = "<group>"; };
+		0C50BDFB1932A5E20005C7C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		0CB102E8192DB58B006824EB /* Rest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB102EB192DB58B006824EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CB102ED192DB58B006824EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +63,7 @@
 		0CB10312192DB58B006824EB /* RestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestTests-Info.plist"; sourceTree = "<group>"; };
 		0CB10314192DB58B006824EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CB10316192DB58B006824EB /* RestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestTests.m; sourceTree = "<group>"; };
+		0CB10320192DB7D5006824EB /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C50BDEB1930372E0005C7C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C50BDEF193038560005C7C3 /* Joke.h */,
+				0C50BDF0193038560005C7C3 /* Joke.m */,
+				0C50BDF2193038CB0005C7C3 /* JokeSvc.h */,
+				0C50BDF31930394B0005C7C3 /* JokeSvcCache.h */,
+				0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0CB102DF192DB58A006824EB = {
 			isa = PBXGroup;
 			children = (
+				0C50BDFB1932A5E20005C7C3 /* README.md */,
 				0CB102F1192DB58B006824EB /* Rest */,
 				0CB10310192DB58B006824EB /* RestTests */,
 				0CB102EA192DB58B006824EB /* Frameworks */,
@@ -112,6 +136,7 @@
 		0CB102F1192DB58B006824EB /* Rest */ = {
 			isa = PBXGroup;
 			children = (
+				0C50BDEB1930372E0005C7C3 /* Model */,
 				0CB102FA192DB58B006824EB /* RestAppDelegate.h */,
 				0CB102FB192DB58B006824EB /* RestAppDelegate.m */,
 				0CB102FD192DB58B006824EB /* Main.storyboard */,
@@ -119,6 +144,7 @@
 				0CB10301192DB58B006824EB /* RestViewController.m */,
 				0CB10303192DB58B006824EB /* Images.xcassets */,
 				0CB102F2192DB58B006824EB /* Supporting Files */,
+				0CB10320192DB7D5006824EB /* readme.txt */,
 			);
 			path = Rest;
 			sourceTree = "<group>";
@@ -200,6 +226,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Spring;
 				TargetAttributes = {
+					0CB102E7192DB58A006824EB = {
+						DevelopmentTeam = A37BU6CJWC;
+					};
 					0CB10308192DB58B006824EB = {
 						TestTargetID = 0CB102E7192DB58A006824EB;
 					};
@@ -231,6 +260,8 @@
 			files = (
 				0CB10304192DB58B006824EB /* Images.xcassets in Resources */,
 				0CB102F6192DB58B006824EB /* InfoPlist.strings in Resources */,
+				0C50BDFC1932A5E20005C7C3 /* README.md in Resources */,
+				0CB10321192DB7D5006824EB /* readme.txt in Resources */,
 				0CB102FF192DB58B006824EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,8 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C50BDF51930394B0005C7C3 /* JokeSvcCache.m in Sources */,
 				0CB102FC192DB58B006824EB /* RestAppDelegate.m in Sources */,
 				0CB10302192DB58B006824EB /* RestViewController.m in Sources */,
+				0C50BDF1193038560005C7C3 /* Joke.m in Sources */,
 				0CB102F8192DB58B006824EB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,10 +410,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rest/Rest-Prefix.pch";
 				INFOPLIST_FILE = "Rest/Rest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,10 +426,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rest/Rest-Prefix.pch";
 				INFOPLIST_FILE = "Rest/Rest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,6 +496,7 @@
 				0CB1031C192DB58B006824EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CB1031D192DB58B006824EB /* Build configuration list for PBXNativeTarget "RestTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +505,7 @@
 				0CB1031F192DB58B006824EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
