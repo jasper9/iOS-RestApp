@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C43311C193ABD1500335BD4 /* icndb-logo-150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C43311B193ABD1500335BD4 /* icndb-logo-150x150.png */; };
+		0C43311F193ABE0B00335BD4 /* JokeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */; };
 		0C50BDF1193038560005C7C3 /* Joke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF0193038560005C7C3 /* Joke.m */; };
 		0C50BDF51930394B0005C7C3 /* JokeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */; };
 		0C50BDFC1932A5E20005C7C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C50BDFB1932A5E20005C7C3 /* README.md */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C43311B193ABD1500335BD4 /* icndb-logo-150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icndb-logo-150x150.png"; sourceTree = SOURCE_ROOT; };
+		0C43311D193ABE0B00335BD4 /* JokeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeDetailViewController.h; sourceTree = "<group>"; };
+		0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeDetailViewController.m; sourceTree = "<group>"; };
 		0C50BDEF193038560005C7C3 /* Joke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joke.h; sourceTree = "<group>"; };
 		0C50BDF0193038560005C7C3 /* Joke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Joke.m; sourceTree = "<group>"; };
 		0C50BDF2193038CB0005C7C3 /* JokeSvc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JokeSvc.h; sourceTree = "<group>"; };
@@ -140,8 +145,11 @@
 				0CB102FA192DB58B006824EB /* RestAppDelegate.h */,
 				0CB102FB192DB58B006824EB /* RestAppDelegate.m */,
 				0CB102FD192DB58B006824EB /* Main.storyboard */,
+				0C43311D193ABE0B00335BD4 /* JokeDetailViewController.h */,
+				0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */,
 				0CB10300192DB58B006824EB /* RestViewController.h */,
 				0CB10301192DB58B006824EB /* RestViewController.m */,
+				0C43311B193ABD1500335BD4 /* icndb-logo-150x150.png */,
 				0CB10303192DB58B006824EB /* Images.xcassets */,
 				0CB102F2192DB58B006824EB /* Supporting Files */,
 				0CB10320192DB7D5006824EB /* readme.txt */,
@@ -260,6 +268,7 @@
 			files = (
 				0CB10304192DB58B006824EB /* Images.xcassets in Resources */,
 				0CB102F6192DB58B006824EB /* InfoPlist.strings in Resources */,
+				0C43311C193ABD1500335BD4 /* icndb-logo-150x150.png in Resources */,
 				0C50BDFC1932A5E20005C7C3 /* README.md in Resources */,
 				0CB10321192DB7D5006824EB /* readme.txt in Resources */,
 				0CB102FF192DB58B006824EB /* Main.storyboard in Resources */,
@@ -285,6 +294,7 @@
 				0CB102FC192DB58B006824EB /* RestAppDelegate.m in Sources */,
 				0CB10302192DB58B006824EB /* RestViewController.m in Sources */,
 				0C50BDF1193038560005C7C3 /* Joke.m in Sources */,
+				0C43311F193ABE0B00335BD4 /* JokeDetailViewController.m in Sources */,
 				0CB102F8192DB58B006824EB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

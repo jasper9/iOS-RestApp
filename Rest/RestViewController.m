@@ -9,6 +9,8 @@
 #import "RestViewController.h"
 #import "Joke.h"
 #import "JokeSvcCache.h"
+#import "JokeDetailViewController.h"
+
 @interface RestViewController ()
 
 @end
@@ -92,6 +94,7 @@ JokeSvcCache *jokeSvc = nil;
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *simpleTableIndentifier = @"SimpleTableItem";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIndentifier];
     if (cell == nil ) {
@@ -100,6 +103,14 @@ JokeSvcCache *jokeSvc = nil;
     }
     
     Joke *joke = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
+    
+    // fix some formatting issues
+    // from: http://stackoverflow.com/questions/9661690/user-regular-expression-to-find-replace-substring-in-nsstring
+    NSError *error = nil;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"&quot;" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSString *modifiedString = [regex stringByReplacingMatchesInString:joke.description options:0 range:NSMakeRange(0, [joke.description length]) withTemplate:@"\""];
+    joke.theJoke = modifiedString;
+    //NSLog(@"%@", modifiedString);
     
     
     //JKG mistake in example code here
@@ -110,6 +121,18 @@ JokeSvcCache *jokeSvc = nil;
     cell.textLabel.text = joke.description;
     
     return cell;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showJokeDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        JokeDetailViewController *destViewController = segue.destinationViewController;
+        Joke *joke = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
+        //destViewController.jokeName = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
+        destViewController.jokeName = joke.description;
+        //destViewController.joke = joke;
+    }
 }
 
 
