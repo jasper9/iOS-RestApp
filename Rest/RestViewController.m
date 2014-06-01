@@ -115,9 +115,9 @@ JokeSvcCache *jokeSvc = nil;
     
     //JKG mistake in example code here
     //cell.textLabel.text = contact.name;
-    cell.textLabel.numberOfLines = 5; // dont set a specific # of lines
-    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    //cell.textLabel.numberOfLines = 1; // dont set a specific # of lines
+    //cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    //cell.textLabel.font = [UIFont systemFontOfSize:16];
     cell.textLabel.text = joke.description;
     
     return cell;
