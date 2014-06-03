@@ -27,6 +27,10 @@
 		0CB10315192DB58B006824EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CB10313192DB58B006824EB /* InfoPlist.strings */; };
 		0CB10317192DB58B006824EB /* RestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB10316192DB58B006824EB /* RestTests.m */; };
 		0CB10321192DB7D5006824EB /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0CB10320192DB7D5006824EB /* readme.txt */; };
+		0CCED817193D7FAA00E33CF2 /* cog_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCED816193D7FAA00E33CF2 /* cog_01@2x.png */; };
+		0CCED819193D801200E33CF2 /* magnifying_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCED818193D801200E33CF2 /* magnifying_glass@2x.png */; };
+		0CCED81B193D877500E33CF2 /* icndb_dot_com.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCED81A193D877500E33CF2 /* icndb_dot_com.png */; };
+		0CCED81D193D87F200E33CF2 /* icndb_dot_com smaller.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCED81C193D87F200E33CF2 /* icndb_dot_com smaller.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		0CB10314192DB58B006824EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CB10316192DB58B006824EB /* RestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestTests.m; sourceTree = "<group>"; };
 		0CB10320192DB7D5006824EB /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		0CCED816193D7FAA00E33CF2 /* cog_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog_01@2x.png"; path = "../../../Xcode - Xtra Files/app-bits_free_tabbar_icons/retina/cog_01@2x.png"; sourceTree = "<group>"; };
+		0CCED818193D801200E33CF2 /* magnifying_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "magnifying_glass@2x.png"; path = "../../../Xcode - Xtra Files/app-bits_free_tabbar_icons/retina/magnifying_glass@2x.png"; sourceTree = "<group>"; };
+		0CCED81A193D877500E33CF2 /* icndb_dot_com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icndb_dot_com.png; path = "../../../Xcode - Xtra Files/icndb_dot_com.png"; sourceTree = "<group>"; };
+		0CCED81C193D87F200E33CF2 /* icndb_dot_com smaller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icndb_dot_com smaller.png"; path = "../../../Xcode - Xtra Files/icndb_dot_com smaller.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,10 @@
 				0CB102FA192DB58B006824EB /* RestAppDelegate.h */,
 				0CB102FB192DB58B006824EB /* RestAppDelegate.m */,
 				0CB102FD192DB58B006824EB /* Main.storyboard */,
+				0CCED81C193D87F200E33CF2 /* icndb_dot_com smaller.png */,
+				0CCED81A193D877500E33CF2 /* icndb_dot_com.png */,
+				0CCED818193D801200E33CF2 /* magnifying_glass@2x.png */,
+				0CCED816193D7FAA00E33CF2 /* cog_01@2x.png */,
 				0C43311D193ABE0B00335BD4 /* JokeDetailViewController.h */,
 				0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */,
 				0CB10300192DB58B006824EB /* RestViewController.h */,
@@ -268,9 +280,13 @@
 			files = (
 				0CB10304192DB58B006824EB /* Images.xcassets in Resources */,
 				0CB102F6192DB58B006824EB /* InfoPlist.strings in Resources */,
+				0CCED81D193D87F200E33CF2 /* icndb_dot_com smaller.png in Resources */,
+				0CCED817193D7FAA00E33CF2 /* cog_01@2x.png in Resources */,
+				0CCED81B193D877500E33CF2 /* icndb_dot_com.png in Resources */,
 				0C43311C193ABD1500335BD4 /* icndb-logo-150x150.png in Resources */,
 				0C50BDFC1932A5E20005C7C3 /* README.md in Resources */,
 				0CB10321192DB7D5006824EB /* readme.txt in Resources */,
+				0CCED819193D801200E33CF2 /* magnifying_glass@2x.png in Resources */,
 				0CB102FF192DB58B006824EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

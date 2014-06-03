@@ -33,6 +33,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     jokeLabel.text = jokeName;
+    
+    CGRect labelFrame = CGRectMake(20, 300, 280, 150);
+    UILabel *myLabel = [[UILabel alloc] initWithFrame:labelFrame];
+    //[myLabel setBackgroundColor:[UIColor orangeColor]];
+    
+    NSString *labelText = jokeName;
+    [myLabel setText:labelText];
+    [myLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0]];
+    // Tell the label to use an unlimited number of lines
+    [myLabel setNumberOfLines:0];
+    [myLabel sizeToFit];
+    
+    [self.view addSubview:myLabel];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
