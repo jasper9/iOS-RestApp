@@ -8,7 +8,9 @@
 
 #import "RestViewController.h"
 #import "Joke.h"
-#import "JokeSvcCache.h"
+//#import "JokeSvcCache.h"
+#import "JokeSvcArchive.h" // added june 6 2014
+
 #import "JokeDetailViewController.h"
 
 @interface RestViewController ()
@@ -17,7 +19,9 @@
 
 @implementation RestViewController
 
-JokeSvcCache *jokeSvc = nil;
+//JokeSvcCache *jokeSvc = nil;
+JokeSvcArchive *jokeSvc = nil;
+
 
 - (IBAction)fetchGreeting;
 {
@@ -69,7 +73,8 @@ JokeSvcCache *jokeSvc = nil;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	jokeSvc = [[JokeSvcCache alloc] init];
+    // jokeSvc = [[JokeSvcCache alloc] init];
+	jokeSvc = [[JokeSvcArchive alloc] init];
 }
 
 - (void)didReceiveMemoryWarning

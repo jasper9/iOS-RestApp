@@ -8,11 +8,30 @@
 
 #import "Joke.h"
 
+static NSString *const THEJOKE = @"thejoke";
+static NSString *const THEID = @"theid";
+
 @implementation Joke
 
 - (NSString *) description {
     //return [NSString stringWithFormat: @"%@ %@" , _theId, _theJoke];
     return [NSString stringWithFormat: @"%@" , _theJoke];
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.theId forKey:THEID];
+    [coder encodeObject:self.theJoke forKey:THEJOKE];
+
+}
+
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        _theId = [coder decodeObjectForKey:THEID];
+        _theJoke = [coder decodeObjectForKey:THEJOKE];
+    }
+    return self;
 }
 
 @end

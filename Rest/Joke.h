@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Joke : NSObject
+@interface Joke : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *theId;
 @property (nonatomic, strong) NSString *theJoke;

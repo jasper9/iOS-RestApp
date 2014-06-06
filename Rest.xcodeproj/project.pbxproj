@@ -12,6 +12,7 @@
 		0C50BDF1193038560005C7C3 /* Joke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF0193038560005C7C3 /* Joke.m */; };
 		0C50BDF51930394B0005C7C3 /* JokeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */; };
 		0C50BDFC1932A5E20005C7C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C50BDFB1932A5E20005C7C3 /* README.md */; };
+		0CA70AFE1942682900B12E63 /* JokeSvcArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */; };
 		0CB102EC192DB58B006824EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EB192DB58B006824EB /* Foundation.framework */; };
 		0CB102EE192DB58B006824EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102ED192DB58B006824EB /* CoreGraphics.framework */; };
 		0CB102F0192DB58B006824EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EF192DB58B006824EB /* UIKit.framework */; };
@@ -53,6 +54,8 @@
 		0C50BDF31930394B0005C7C3 /* JokeSvcCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcCache.h; sourceTree = "<group>"; };
 		0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcCache.m; sourceTree = "<group>"; };
 		0C50BDFB1932A5E20005C7C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0CA70AFC1942682900B12E63 /* JokeSvcArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcArchive.h; sourceTree = "<group>"; };
+		0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcArchive.m; sourceTree = "<group>"; };
 		0CB102E8192DB58B006824EB /* Rest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB102EB192DB58B006824EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CB102ED192DB58B006824EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +114,8 @@
 				0C50BDF2193038CB0005C7C3 /* JokeSvc.h */,
 				0C50BDF31930394B0005C7C3 /* JokeSvcCache.h */,
 				0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */,
+				0CA70AFC1942682900B12E63 /* JokeSvcArchive.h */,
+				0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C50BDF51930394B0005C7C3 /* JokeSvcCache.m in Sources */,
+				0CA70AFE1942682900B12E63 /* JokeSvcArchive.m in Sources */,
 				0CB102FC192DB58B006824EB /* RestAppDelegate.m in Sources */,
 				0CB10302192DB58B006824EB /* RestViewController.m in Sources */,
 				0C50BDF1193038560005C7C3 /* Joke.m in Sources */,
