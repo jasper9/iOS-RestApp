@@ -16,3 +16,6 @@ http://spring.io/guides/gs/consuming-rest-ios/
 Credit to the class example code ContactMgrs
 
 Borrowed a regex tip from here http://stackoverflow.com/questions/9661690/user-regular-expression-to-find-replace-substring-in-nsstring
+
+http://stackoverflow.com/questions/7921579/iphone-storyboard-editing-a-table-view
+

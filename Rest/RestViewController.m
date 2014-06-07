@@ -12,12 +12,15 @@
 #import "JokeSvcArchive.h" // added june 6 2014
 
 #import "JokeDetailViewController.h"
+#import "JokeSearchViewController.h"
 
 @interface RestViewController ()
 
 @end
 
 @implementation RestViewController
+
+@synthesize jokeID;
 
 //JokeSvcCache *jokeSvc = nil;
 JokeSvcArchive *jokeSvc = nil;
@@ -75,6 +78,7 @@ JokeSvcArchive *jokeSvc = nil;
     [super viewDidLoad];
     // jokeSvc = [[JokeSvcCache alloc] init];
 	jokeSvc = [[JokeSvcArchive alloc] init];
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,6 +86,32 @@ JokeSvcArchive *jokeSvc = nil;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+    
+    if(self.tableView.editing) {
+        NSLog(@"editMode on");
+    } else {
+        NSLog(@"editMode off");
+    }
+}
+
+
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    Joke *joke = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
+    [jokeSvc deleteJoke:joke];
+    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+    
+}
+
+
+
 
 
 
@@ -136,6 +166,15 @@ JokeSvcArchive *jokeSvc = nil;
         Joke *joke = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
         //destViewController.jokeName = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
         destViewController.jokeName = joke.description;
+        //destViewController.joke = joke;
+    }
+    
+    if ([segue.identifier isEqualToString:@"showSearchDetail"]) {
+       // NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        JokeSearchViewController *destViewController = segue.destinationViewController;
+        //Joke *joke = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
+        //destViewController.jokeName = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
+        destViewController.jokeID = self.jokeID.text;
         //destViewController.joke = joke;
     }
 }

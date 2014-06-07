@@ -13,5 +13,5 @@
 - (Joke *) createJoke: (Joke *) joke;
 - (NSMutableArray *) retrieveAllJokes;
 //- (Contact *) updateContact: (Contact *) contact;
-//- (Contact *) deleteContact: (Contact *) contact;
+- (Joke *) deleteJoke: (Joke *) joke;
 @end

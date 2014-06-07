@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Joke.h"
+#import "JokeSvcArchive.h"
 
 @interface RestTests : XCTestCase
 
@@ -26,9 +28,27 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testJokeSvcArchive
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSLog(@"*** Starting testJokeSvcArchive ***");
+    JokeSvcArchive *jokeSvc = [[JokeSvcArchive alloc] init];
+    NSUInteger initialCount = [[jokeSvc retrieveAllJokes] count];
+    
+    Joke *joke = [[Joke alloc] init];
+    joke.theJoke = @"This is my test joke 1.";
+    joke.theId = @"42";
+    
+    [jokeSvc createJoke:(Joke *) joke];
+    NSUInteger finalCount = [[jokeSvc retrieveAllJokes] count];
+    
+    XCTAssertEqual((NSUInteger)initialCount + 1, (NSUInteger)finalCount, @"initial count %lu, final count %lu ", initialCount, (unsigned long)finalCount);
+    
+//  #### HERE START NSLOGS
+    //NSLog(@"*** The Count: %i", count);
+    NSLog(@"*** Ending testJokeSvcArchive ***");
+    
+    
 }
 
 @end

@@ -73,13 +73,15 @@ NSMutableArray *jokes;
 - (Joke *) updateJoke: (Joke *) joke {
     return joke;
 }
-
+*/
 
 
 - (Joke *) deleteJoke: (Joke *) joke {
+    [jokes removeObject: joke]; //JKG
+    [NSKeyedArchiver archiveRootObject: jokes toFile:filePath];
     return joke;
 }
-*/
+
 
 @end
 
