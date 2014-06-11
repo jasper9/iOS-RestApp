@@ -7,6 +7,8 @@
 //
 
 #import "RestAppDelegate.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "Reachability.h"
 
 @implementation RestAppDelegate
 

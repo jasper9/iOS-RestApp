@@ -14,6 +14,10 @@
 #import "JokeDetailViewController.h"
 #import "JokeSearchViewController.h"
 
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "Reachability.h"
+
+
 @interface RestViewController ()
 
 @end
@@ -76,6 +80,23 @@ JokeSvcArchive *jokeSvc = nil;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    if (![self connected])
+    {
+        // not connected
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Internet Connection Not Found" message:@"Please check your network settings!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    } else
+    {
+        // connected, do some internet stuff
+        
+    }
+    
+    
+    
+    
+    
     // jokeSvc = [[JokeSvcCache alloc] init];
 	jokeSvc = [[JokeSvcArchive alloc] init];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -179,6 +200,12 @@ JokeSvcArchive *jokeSvc = nil;
     }
 }
 
+- (BOOL)connected
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
+}
 
 
 @end

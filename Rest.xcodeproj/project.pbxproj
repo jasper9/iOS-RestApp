@@ -12,6 +12,8 @@
 		0C50BDF1193038560005C7C3 /* Joke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF0193038560005C7C3 /* Joke.m */; };
 		0C50BDF51930394B0005C7C3 /* JokeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */; };
 		0C50BDFC1932A5E20005C7C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C50BDFB1932A5E20005C7C3 /* README.md */; };
+		0C69E97E19480E2A000719AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C69E97D19480E2A000719AC /* SystemConfiguration.framework */; };
+		0C69E98119480F2B000719AC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C69E98019480F2B000719AC /* Reachability.m */; };
 		0C81C8F71942A88D009C9D33 /* JokeSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C8F61942A88D009C9D33 /* JokeSearchViewController.m */; };
 		0CA70AFE1942682900B12E63 /* JokeSvcArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */; };
 		0CB102EC192DB58B006824EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EB192DB58B006824EB /* Foundation.framework */; };
@@ -55,6 +57,9 @@
 		0C50BDF31930394B0005C7C3 /* JokeSvcCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcCache.h; sourceTree = "<group>"; };
 		0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcCache.m; sourceTree = "<group>"; };
 		0C50BDFB1932A5E20005C7C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0C69E97D19480E2A000719AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0C69E97F19480F2B000719AC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0C69E98019480F2B000719AC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0C81C8F51942A88D009C9D33 /* JokeSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSearchViewController.h; sourceTree = "<group>"; };
 		0C81C8F61942A88D009C9D33 /* JokeSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSearchViewController.m; sourceTree = "<group>"; };
 		0CA70AFC1942682900B12E63 /* JokeSvcArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcArchive.h; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C69E97E19480E2A000719AC /* SystemConfiguration.framework in Frameworks */,
 				0CB102EE192DB58B006824EB /* CoreGraphics.framework in Frameworks */,
 				0CB102F0192DB58B006824EB /* UIKit.framework in Frameworks */,
 				0CB102EC192DB58B006824EB /* Foundation.framework in Frameworks */,
@@ -146,6 +152,7 @@
 		0CB102EA192DB58B006824EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C69E97D19480E2A000719AC /* SystemConfiguration.framework */,
 				0CB102EB192DB58B006824EB /* Foundation.framework */,
 				0CB102ED192DB58B006824EB /* CoreGraphics.framework */,
 				0CB102EF192DB58B006824EB /* UIKit.framework */,
@@ -160,6 +167,8 @@
 				0C50BDEB1930372E0005C7C3 /* Model */,
 				0CB102FA192DB58B006824EB /* RestAppDelegate.h */,
 				0CB102FB192DB58B006824EB /* RestAppDelegate.m */,
+				0C69E97F19480F2B000719AC /* Reachability.h */,
+				0C69E98019480F2B000719AC /* Reachability.m */,
 				0CB102FD192DB58B006824EB /* Main.storyboard */,
 				0CCED81C193D87F200E33CF2 /* icndb_dot_com smaller.png */,
 				0CCED81A193D877500E33CF2 /* icndb_dot_com.png */,
@@ -323,6 +332,7 @@
 				0CB10302192DB58B006824EB /* RestViewController.m in Sources */,
 				0C50BDF1193038560005C7C3 /* Joke.m in Sources */,
 				0C43311F193ABE0B00335BD4 /* JokeDetailViewController.m in Sources */,
+				0C69E98119480F2B000719AC /* Reachability.m in Sources */,
 				0CB102F8192DB58B006824EB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

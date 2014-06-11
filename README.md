@@ -6,7 +6,8 @@ This app does GET requests to the chuck norris database (http://www.icndb.com)
 Change Log:
 May ? - Initial version, basic GET request is fully working
 May 31 - Added storyboard functionality to show details of each joke
-
+.. - Added Archive support (and a few other trinkets)
+June 10 - Added check for network reachability using apples example code
 -------------------------------------------------------------------------------------
 Credits 
 
@@ -19,3 +20,4 @@ Borrowed a regex tip from here http://stackoverflow.com/questions/9661690/user-r
 
 http://stackoverflow.com/questions/7921579/iphone-storyboard-editing-a-table-view
 
+http://iossolutions.blogspot.com/2013/06/to-check-internet-availability-xcode.html
