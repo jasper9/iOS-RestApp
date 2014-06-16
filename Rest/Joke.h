@@ -10,7 +10,9 @@
 
 @interface Joke : NSObject <NSCoding>
 
-@property (nonatomic, strong) NSString *theId;
+// hmmm
+//@property (nonatomic, strong) NSString *theId;
+@property (nonatomic, assign) int id;
 @property (nonatomic, strong) NSString *theJoke;
 
 @end

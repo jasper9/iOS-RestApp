@@ -8,6 +8,7 @@
 
 #import "Joke.h"
 
+//static  int *const ID = 0;
 static NSString *const THEJOKE = @"thejoke";
 static NSString *const THEID = @"theid";
 
@@ -19,7 +20,8 @@ static NSString *const THEID = @"theid";
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder {
-    [coder encodeObject:self.theId forKey:THEID];
+    //[coder encodeObject:self.theId forKey:THEID];
+    //[coder encodeObject:self.id forKey:THEID];
     [coder encodeObject:self.theJoke forKey:THEJOKE];
 
 }
@@ -28,7 +30,7 @@ static NSString *const THEID = @"theid";
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super init];
     if (self) {
-        _theId = [coder decodeObjectForKey:THEID];
+     //   _theId = [coder decodeObjectForKey:THEID];
         _theJoke = [coder decodeObjectForKey:THEJOKE];
     }
     return self;

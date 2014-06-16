@@ -9,7 +9,9 @@
 #import "RestViewController.h"
 #import "Joke.h"
 //#import "JokeSvcCache.h"
-#import "JokeSvcArchive.h" // added june 6 2014
+//#import "JokeSvcArchive.h" // added june 6 2014
+#import "JokeSvcSQLite.h" // added june 15 2014
+
 
 #import "JokeDetailViewController.h"
 #import "JokeSearchViewController.h"
@@ -27,7 +29,9 @@
 @synthesize jokeID;
 
 //JokeSvcCache *jokeSvc = nil;
-JokeSvcArchive *jokeSvc = nil;
+//JokeSvcArchive *jokeSvc = nil;
+JokeSvcSQLite *jokeSvc = nil;
+
 
 
 - (IBAction)fetchGreeting;
@@ -51,6 +55,7 @@ JokeSvcArchive *jokeSvc = nil;
              NSLog(@"Greeting: %@", greeting);
              id values = [greeting valueForKey:@"value"];
              NSLog(@"Values: %@", values);
+             // id theId = [values valueForKey:@"id"];   //JKG HOW IT IS BEFORE SQL
              id theId = [values valueForKey:@"id"];
              //NSString *theId = [[values objectAtIndex: 0]objectForKey:@"id"];
              NSLog(@"ID: %@", theId);
@@ -63,7 +68,11 @@ JokeSvcArchive *jokeSvc = nil;
              
              Joke *joke = [[Joke alloc] init];
              joke.theJoke = theJoke;
-             joke.theId = [NSString stringWithFormat:@"%@", theId];
+             //joke.theId = [NSString stringWithFormat:@"%@", theId];
+             //joke.id = [NSString stringWithFormat:@"%@", theId];
+             joke.id = (int)theId;
+             
+             
              [jokeSvc createJoke:joke];
              [self.tableView reloadData];
              //self.greetingId.text = [values valueForKey:@"id"];
@@ -98,7 +107,8 @@ JokeSvcArchive *jokeSvc = nil;
     
     
     // jokeSvc = [[JokeSvcCache alloc] init];
-	jokeSvc = [[JokeSvcArchive alloc] init];
+	//jokeSvc = [[JokeSvcArchive alloc] init];
+    jokeSvc = [[JokeSvcSQLite alloc] init];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 

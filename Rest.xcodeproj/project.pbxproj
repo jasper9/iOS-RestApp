@@ -13,6 +13,8 @@
 		0C50BDFC1932A5E20005C7C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C50BDFB1932A5E20005C7C3 /* README.md */; };
 		0C69E97E19480E2A000719AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C69E97D19480E2A000719AC /* SystemConfiguration.framework */; };
 		0C69E98119480F2B000719AC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C69E98019480F2B000719AC /* Reachability.m */; };
+		0C6EAFD6194E8A96003248BD /* JokeSvcSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EAFD5194E8A96003248BD /* JokeSvcSQLite.m */; };
+		0C6EAFD8194E8ADF003248BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6EAFD7194E8ADF003248BD /* libsqlite3.dylib */; };
 		0C81C8F71942A88D009C9D33 /* JokeSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C8F61942A88D009C9D33 /* JokeSearchViewController.m */; };
 		0CA70AFE1942682900B12E63 /* JokeSvcArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */; };
 		0CB102EC192DB58B006824EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EB192DB58B006824EB /* Foundation.framework */; };
@@ -59,6 +61,9 @@
 		0C69E97D19480E2A000719AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C69E97F19480F2B000719AC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		0C69E98019480F2B000719AC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0C6EAFD4194E8A96003248BD /* JokeSvcSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcSQLite.h; sourceTree = "<group>"; };
+		0C6EAFD5194E8A96003248BD /* JokeSvcSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcSQLite.m; sourceTree = "<group>"; };
+		0C6EAFD7194E8ADF003248BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0C81C8F51942A88D009C9D33 /* JokeSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSearchViewController.h; sourceTree = "<group>"; };
 		0C81C8F61942A88D009C9D33 /* JokeSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSearchViewController.m; sourceTree = "<group>"; };
 		0CA70AFC1942682900B12E63 /* JokeSvcArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcArchive.h; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6EAFD8194E8ADF003248BD /* libsqlite3.dylib in Frameworks */,
 				0C69E97E19480E2A000719AC /* SystemConfiguration.framework in Frameworks */,
 				0CB102EE192DB58B006824EB /* CoreGraphics.framework in Frameworks */,
 				0CB102F0192DB58B006824EB /* UIKit.framework in Frameworks */,
@@ -125,6 +131,8 @@
 				0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */,
 				0CA70AFC1942682900B12E63 /* JokeSvcArchive.h */,
 				0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */,
+				0C6EAFD4194E8A96003248BD /* JokeSvcSQLite.h */,
+				0C6EAFD5194E8A96003248BD /* JokeSvcSQLite.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 		0CB102EA192DB58B006824EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C6EAFD7194E8ADF003248BD /* libsqlite3.dylib */,
 				0C69E97D19480E2A000719AC /* SystemConfiguration.framework */,
 				0CB102EB192DB58B006824EB /* Foundation.framework */,
 				0CB102ED192DB58B006824EB /* CoreGraphics.framework */,
@@ -340,6 +349,7 @@
 				0CB10302192DB58B006824EB /* RestViewController.m in Sources */,
 				0C50BDF1193038560005C7C3 /* Joke.m in Sources */,
 				0C43311F193ABE0B00335BD4 /* JokeDetailViewController.m in Sources */,
+				0C6EAFD6194E8A96003248BD /* JokeSvcSQLite.m in Sources */,
 				0C69E98119480F2B000719AC /* Reachability.m in Sources */,
 				0CB102F8192DB58B006824EB /* main.m in Sources */,
 			);

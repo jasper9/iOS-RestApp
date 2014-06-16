@@ -33,11 +33,12 @@ NSMutableArray *jokes = nil;
 - (Contact *) updateContact:(Contact *) contact {
     return contact;
 }
-
-- (Contact *) deleteContact:(Contact *) contact {
-    [contacts removeObject: contact]; //JKG
-    return contact;
-}
 */
+
+- (Joke *) deleteJoke:(Joke *) joke {
+    [jokes removeObject: joke]; //JKG
+    return joke;
+}
+
 
 @end
