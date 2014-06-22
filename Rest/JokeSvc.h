@@ -11,7 +11,9 @@
 @protocol JokeSvc <NSObject>
 
 - (Joke *) createJoke: (Joke *) joke;
-- (NSMutableArray *) retrieveAllJokes;
+- (NSArray *) retrieveAllJokes;
 //- (Contact *) updateContact: (Contact *) contact;
 - (Joke *) deleteJoke: (Joke *) joke;
+- (Joke *) createManagedJoke;
+- (void) saveJokes;
 @end

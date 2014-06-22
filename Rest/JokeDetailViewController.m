@@ -18,6 +18,7 @@
 
 @synthesize jokeLabel;
 @synthesize jokeName;
+@synthesize jokeID;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

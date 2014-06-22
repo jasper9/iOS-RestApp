@@ -2,17 +2,17 @@
 //  Joke.h
 //  Rest
 //
-//  Created by Josh Gray on 5/23/14.
+//  Created by Josh Gray on 6/21/14.
 //  Copyright (c) 2014 Spring. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Joke : NSObject <NSCoding>
 
-// hmmm
-//@property (nonatomic, strong) NSString *theId;
-@property (nonatomic, assign) int id;
-@property (nonatomic, strong) NSString *theJoke;
+@interface Joke : NSManagedObject
+
+@property (nonatomic, retain) NSString * theJoke;
+@property (nonatomic, retain) NSNumber * id;
 
 @end

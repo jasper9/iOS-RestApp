@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C32092F195655C400A7F04E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32092E195655C400A7F04E /* CoreData.framework */; };
+		0C3209321956562100A7F04E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C3209301956562100A7F04E /* Model.xcdatamodeld */; };
+		0C320935195656F500A7F04E /* JokeSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C320934195656F500A7F04E /* JokeSvcCoreData.m */; };
+		0C32094119565AE700A7F04E /* Joke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32094019565AE700A7F04E /* Joke.m */; };
 		0C43311F193ABE0B00335BD4 /* JokeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */; };
-		0C50BDF1193038560005C7C3 /* Joke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF0193038560005C7C3 /* Joke.m */; };
-		0C50BDF51930394B0005C7C3 /* JokeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */; };
 		0C50BDFC1932A5E20005C7C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C50BDFB1932A5E20005C7C3 /* README.md */; };
 		0C69E97E19480E2A000719AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C69E97D19480E2A000719AC /* SystemConfiguration.framework */; };
 		0C69E98119480F2B000719AC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C69E98019480F2B000719AC /* Reachability.m */; };
-		0C6EAFD6194E8A96003248BD /* JokeSvcSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EAFD5194E8A96003248BD /* JokeSvcSQLite.m */; };
 		0C6EAFD8194E8ADF003248BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6EAFD7194E8ADF003248BD /* libsqlite3.dylib */; };
 		0C81C8F71942A88D009C9D33 /* JokeSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C8F61942A88D009C9D33 /* JokeSearchViewController.m */; };
-		0CA70AFE1942682900B12E63 /* JokeSvcArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */; };
 		0CB102EC192DB58B006824EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EB192DB58B006824EB /* Foundation.framework */; };
 		0CB102EE192DB58B006824EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102ED192DB58B006824EB /* CoreGraphics.framework */; };
 		0CB102F0192DB58B006824EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB102EF192DB58B006824EB /* UIKit.framework */; };
@@ -50,24 +50,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C32092E195655C400A7F04E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0C3209311956562100A7F04E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0C320933195656F500A7F04E /* JokeSvcCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcCoreData.h; sourceTree = "<group>"; };
+		0C320934195656F500A7F04E /* JokeSvcCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcCoreData.m; sourceTree = "<group>"; };
+		0C32093F19565AE700A7F04E /* Joke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joke.h; sourceTree = "<group>"; };
+		0C32094019565AE700A7F04E /* Joke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Joke.m; sourceTree = "<group>"; };
 		0C43311D193ABE0B00335BD4 /* JokeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeDetailViewController.h; sourceTree = "<group>"; };
 		0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeDetailViewController.m; sourceTree = "<group>"; };
-		0C50BDEF193038560005C7C3 /* Joke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joke.h; sourceTree = "<group>"; };
-		0C50BDF0193038560005C7C3 /* Joke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Joke.m; sourceTree = "<group>"; };
 		0C50BDF2193038CB0005C7C3 /* JokeSvc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JokeSvc.h; sourceTree = "<group>"; };
-		0C50BDF31930394B0005C7C3 /* JokeSvcCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcCache.h; sourceTree = "<group>"; };
-		0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcCache.m; sourceTree = "<group>"; };
 		0C50BDFB1932A5E20005C7C3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		0C69E97D19480E2A000719AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C69E97F19480F2B000719AC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		0C69E98019480F2B000719AC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		0C6EAFD4194E8A96003248BD /* JokeSvcSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcSQLite.h; sourceTree = "<group>"; };
-		0C6EAFD5194E8A96003248BD /* JokeSvcSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcSQLite.m; sourceTree = "<group>"; };
 		0C6EAFD7194E8ADF003248BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0C81C8F51942A88D009C9D33 /* JokeSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSearchViewController.h; sourceTree = "<group>"; };
 		0C81C8F61942A88D009C9D33 /* JokeSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSearchViewController.m; sourceTree = "<group>"; };
-		0CA70AFC1942682900B12E63 /* JokeSvcArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcArchive.h; sourceTree = "<group>"; };
-		0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcArchive.m; sourceTree = "<group>"; };
 		0CB102E8192DB58B006824EB /* Rest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB102EB192DB58B006824EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CB102ED192DB58B006824EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -100,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C32092F195655C400A7F04E /* CoreData.framework in Frameworks */,
 				0C6EAFD8194E8ADF003248BD /* libsqlite3.dylib in Frameworks */,
 				0C69E97E19480E2A000719AC /* SystemConfiguration.framework in Frameworks */,
 				0CB102EE192DB58B006824EB /* CoreGraphics.framework in Frameworks */,
@@ -124,15 +123,12 @@
 		0C50BDEB1930372E0005C7C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0C50BDEF193038560005C7C3 /* Joke.h */,
-				0C50BDF0193038560005C7C3 /* Joke.m */,
 				0C50BDF2193038CB0005C7C3 /* JokeSvc.h */,
-				0C50BDF31930394B0005C7C3 /* JokeSvcCache.h */,
-				0C50BDF41930394B0005C7C3 /* JokeSvcCache.m */,
-				0CA70AFC1942682900B12E63 /* JokeSvcArchive.h */,
-				0CA70AFD1942682900B12E63 /* JokeSvcArchive.m */,
-				0C6EAFD4194E8A96003248BD /* JokeSvcSQLite.h */,
-				0C6EAFD5194E8A96003248BD /* JokeSvcSQLite.m */,
+				0C3209301956562100A7F04E /* Model.xcdatamodeld */,
+				0C32093F19565AE700A7F04E /* Joke.h */,
+				0C32094019565AE700A7F04E /* Joke.m */,
+				0C320933195656F500A7F04E /* JokeSvcCoreData.h */,
+				0C320934195656F500A7F04E /* JokeSvcCoreData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -160,6 +156,7 @@
 		0CB102EA192DB58B006824EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C32092E195655C400A7F04E /* CoreData.framework */,
 				0C6EAFD7194E8ADF003248BD /* libsqlite3.dylib */,
 				0C69E97D19480E2A000719AC /* SystemConfiguration.framework */,
 				0CB102EB192DB58B006824EB /* Foundation.framework */,
@@ -342,15 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C50BDF51930394B0005C7C3 /* JokeSvcCache.m in Sources */,
-				0CA70AFE1942682900B12E63 /* JokeSvcArchive.m in Sources */,
 				0CB102FC192DB58B006824EB /* RestAppDelegate.m in Sources */,
 				0C81C8F71942A88D009C9D33 /* JokeSearchViewController.m in Sources */,
+				0C32094119565AE700A7F04E /* Joke.m in Sources */,
+				0C320935195656F500A7F04E /* JokeSvcCoreData.m in Sources */,
 				0CB10302192DB58B006824EB /* RestViewController.m in Sources */,
-				0C50BDF1193038560005C7C3 /* Joke.m in Sources */,
 				0C43311F193ABE0B00335BD4 /* JokeDetailViewController.m in Sources */,
-				0C6EAFD6194E8A96003248BD /* JokeSvcSQLite.m in Sources */,
 				0C69E98119480F2B000719AC /* Reachability.m in Sources */,
+				0C3209321956562100A7F04E /* Model.xcdatamodeld in Sources */,
 				0CB102F8192DB58B006824EB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +570,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0C3209301956562100A7F04E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0C3209311956562100A7F04E /* Model.xcdatamodel */,
+			);
+			currentVersion = 0C3209311956562100A7F04E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0CB102E0192DB58A006824EB /* Project object */;
 }

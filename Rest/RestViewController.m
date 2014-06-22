@@ -10,7 +10,8 @@
 #import "Joke.h"
 //#import "JokeSvcCache.h"
 //#import "JokeSvcArchive.h" // added june 6 2014
-#import "JokeSvcSQLite.h" // added june 15 2014
+//#import "JokeSvcSQLite.h" // added june 15 2014
+#import "JokeSvcCoreData.h" // added june 21 2014
 
 
 #import "JokeDetailViewController.h"
@@ -30,7 +31,8 @@
 
 //JokeSvcCache *jokeSvc = nil;
 //JokeSvcArchive *jokeSvc = nil;
-JokeSvcSQLite *jokeSvc = nil;
+//JokeSvcSQLite *jokeSvc = nil;
+JokeSvcCoreData *jokeSvc = nil;
 
 
 
@@ -65,16 +67,24 @@ JokeSvcSQLite *jokeSvc = nil;
              
              self.greetingId.text = [NSString stringWithFormat:@"%@", theId];
              self.greetingContent.text = theJoke;
+        
+             //Joke *joke = [[Joke alloc] init];
+             Joke *joke = [jokeSvc createManagedJoke];
+             //Joke *joke = [jokeSvc createJoke];
              
-             Joke *joke = [[Joke alloc] init];
              joke.theJoke = theJoke;
              //joke.theId = [NSString stringWithFormat:@"%@", theId];
              //joke.id = [NSString stringWithFormat:@"%@", theId];
-             joke.id = (int)theId;
+             joke.id = theId;
              
              
-             [jokeSvc createJoke:joke];
+             //[jokeSvc createJoke:joke];
+             
+             
              [self.tableView reloadData];
+             
+             
+             
              //self.greetingId.text = [values valueForKey:@"id"];
              //id forecastday = [simpleforecast valueForKey:@"forecastday"];
              //self.greetingId.text = [[theJoke objectForKey:@"id"] stringValue];
@@ -108,7 +118,8 @@ JokeSvcSQLite *jokeSvc = nil;
     
     // jokeSvc = [[JokeSvcCache alloc] init];
 	//jokeSvc = [[JokeSvcArchive alloc] init];
-    jokeSvc = [[JokeSvcSQLite alloc] init];
+    //jokeSvc = [[JokeSvcSQLite alloc] init];
+    jokeSvc = [[JokeSvcCoreData alloc] init];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
@@ -173,9 +184,14 @@ JokeSvcSQLite *jokeSvc = nil;
     // fix some formatting issues
     // from: http://stackoverflow.com/questions/9661690/user-regular-expression-to-find-replace-substring-in-nsstring
     NSError *error = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"&quot;" options:NSRegularExpressionCaseInsensitive error:&error];
-    NSString *modifiedString = [regex stringByReplacingMatchesInString:joke.description options:0 range:NSMakeRange(0, [joke.description length]) withTemplate:@"\""];
+
+    
+    // removing for core data use, this worked prior
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"&quot;" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSString *modifiedString = [regex stringByReplacingMatchesInString:joke.theJoke options:0 range:NSMakeRange(0, [joke.theJoke length]) withTemplate:@"\""];
     joke.theJoke = modifiedString;
+    
+    
     //NSLog(@"%@", modifiedString);
     
     
@@ -184,7 +200,11 @@ JokeSvcSQLite *jokeSvc = nil;
     //cell.textLabel.numberOfLines = 1; // dont set a specific # of lines
     //cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     //cell.textLabel.font = [UIFont systemFontOfSize:16];
-    cell.textLabel.text = joke.description;
+    
+    // modified for core data, this worked prior
+    // cell.textLabel.text = joke.description;
+    
+    cell.textLabel.text = joke.theJoke;
     
     return cell;
 }
@@ -196,7 +216,14 @@ JokeSvcSQLite *jokeSvc = nil;
         JokeDetailViewController *destViewController = segue.destinationViewController;
         Joke *joke = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
         //destViewController.jokeName = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
-        destViewController.jokeName = joke.description;
+        
+        // changed for core data, this worked prior
+        //destViewController.jokeName = joke.description;
+        
+        destViewController.jokeName = joke.theJoke;
+        //destViewController.jokeID = joke.id;
+        
+        
         //destViewController.joke = joke;
     }
     

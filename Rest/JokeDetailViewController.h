@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *jokeLabel;
 @property (nonatomic, strong) NSString *jokeName;
+@property (nonatomic) int *jokeID;
 
 @end
