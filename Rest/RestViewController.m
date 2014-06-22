@@ -72,10 +72,17 @@ JokeSvcCoreData *jokeSvc = nil;
              Joke *joke = [jokeSvc createManagedJoke];
              //Joke *joke = [jokeSvc createJoke];
              
+             // new stuff
+             //NSDate *date = [NSDate date];
+             //long *epoc = [@(floor([date timeIntervalSince1970])) longLongValue];
+             NSDate *now = [[NSDate alloc] init];
+             NSLog(@"NOW: %@", now);
+             
              joke.theJoke = theJoke;
              //joke.theId = [NSString stringWithFormat:@"%@", theId];
              //joke.id = [NSString stringWithFormat:@"%@", theId];
              joke.id = theId;
+             joke.datetime = now;
              
              
              //[jokeSvc createJoke:joke];
@@ -204,7 +211,20 @@ JokeSvcCoreData *jokeSvc = nil;
     // modified for core data, this worked prior
     // cell.textLabel.text = joke.description;
     
+    
+    
     cell.textLabel.text = joke.theJoke;
+    
+    
+    // testing the sort order, display the datetime field
+    //    from http://stackoverflow.com/questions/576265/convert-nsdate-to-nsstring
+    /*
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss zzz"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+    NSString *stringFromDate = [formatter stringFromDate:joke.datetime];
+    cell.textLabel.text = stringFromDate;
+    */
     
     return cell;
 }

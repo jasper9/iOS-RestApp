@@ -13,5 +13,6 @@
 
 @dynamic theJoke;
 @dynamic id;
+@dynamic datetime;
 
 @end

@@ -72,8 +72,8 @@ NSManagedObjectContext *moc = nil;
     [fetchRequest setEntity:entity];
     
     // removing sort
-    //NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:YES];
-    //[fetchRequest setSortDescriptors:@[sortDescriptor]];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"datetime" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
     
     NSError *error;
