@@ -86,9 +86,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aa1-qO-Ed3" firstAttribute="leading" secondItem="tUK-8I-kIn" secondAttribute="trailing" constant="-362" id="124-z8-F93"/>
                             <constraint firstItem="OeW-Oa-vCV" firstAttribute="top" secondItem="tUK-8I-kIn" secondAttribute="bottom" constant="-29" id="5BC-5r-jl0"/>
                             <constraint firstItem="H3Z-nH-fBY" firstAttribute="top" secondItem="Bv1-bf-P6h" secondAttribute="bottom" constant="4" id="69m-Jt-99S"/>
                             <constraint firstItem="OeW-Oa-vCV" firstAttribute="top" secondItem="CtD-Ee-sh3" secondAttribute="bottom" constant="72" id="EqN-1Y-jDz"/>
+                            <constraint firstItem="OeW-Oa-vCV" firstAttribute="top" secondItem="tUK-8I-kIn" secondAttribute="bottom" constant="-29" id="LV0-Vd-dv9"/>
                             <constraint firstItem="OeW-Oa-vCV" firstAttribute="top" secondItem="aa1-qO-Ed3" secondAttribute="bottom" id="YTo-Ug-zZX"/>
                             <constraint firstItem="OeW-Oa-vCV" firstAttribute="top" secondItem="9pE-dp-sOq" secondAttribute="bottom" constant="14" id="jUu-RH-Ydj"/>
                             <constraint firstItem="OeW-Oa-vCV" firstAttribute="top" secondItem="H3Z-nH-fBY" secondAttribute="bottom" constant="101" id="u00-4u-bR7"/>
@@ -161,22 +163,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Powered by: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAB-RO-L3W">
-                                <rect key="frame" x="8" y="480" width="511" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Powered by: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAB-RO-L3W">
+                                <rect key="frame" x="8" y="386.5" width="511" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Internet Chuck Norris DB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K8-El-X7m">
-                                <rect key="frame" x="8" y="493" width="511" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Internet Chuck Norris DB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K8-El-X7m">
+                                <rect key="frame" x="8.5" y="400.5" width="511" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icndb_dot_com smaller.png" translatesAutoresizingMaskIntoConstraints="NO" id="M4u-Y3-OIq">
-                                <rect key="frame" x="130" y="416" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="icndb_dot_com smaller.png" translatesAutoresizingMaskIntoConstraints="NO" id="M4u-Y3-OIq">
+                                <rect key="frame" x="130" y="332" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-eD-T9B" userLabel="jokeID">
@@ -229,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(not finished, as in will crash)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWp-oa-XCX">
-                                <rect key="frame" x="60" y="322" width="201" height="21"/>
+                                <rect key="frame" x="60" y="328" width="201" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
@@ -238,6 +240,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9q5-ka-3WS" firstAttribute="top" secondItem="M4u-Y3-OIq" secondAttribute="bottom" constant="-29" id="3mZ-sZ-e9u"/>
+                            <constraint firstItem="9q5-ka-3WS" firstAttribute="top" secondItem="3K8-El-X7m" secondAttribute="bottom" constant="-0.5" id="6ul-lJ-wO5"/>
+                            <constraint firstItem="3K8-El-X7m" firstAttribute="leading" secondItem="M4u-Y3-OIq" secondAttribute="trailing" constant="-361.5" id="c4U-hO-1i1"/>
+                            <constraint firstItem="9q5-ka-3WS" firstAttribute="top" secondItem="GAB-RO-L3W" secondAttribute="bottom" constant="13.5" id="yXa-zw-o1S"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hello Chuck Norris: Search" id="nrD-CF-Yz1"/>
                 </viewController>
