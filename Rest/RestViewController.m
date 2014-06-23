@@ -27,7 +27,8 @@
 
 @implementation RestViewController
 
-@synthesize jokeID;
+@synthesize CaptureInformation;
+@synthesize SendInformation;
 
 //JokeSvcCache *jokeSvc = nil;
 //JokeSvcArchive *jokeSvc = nil;
@@ -38,6 +39,8 @@ JokeSvcCoreData *jokeSvc = nil;
 
 - (IBAction)fetchGreeting;
 {
+    NSLog(@"fetchGreeting: ENTERED");
+    
     // http://api.icndb.com/jokes/random
     // http://rest-service.guides.spring.io/greeting
     NSURL *url = [NSURL URLWithString:@"http://api.icndb.com/jokes/random"];
@@ -231,29 +234,24 @@ JokeSvcCoreData *jokeSvc = nil;
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSLog(@"prepareForSegue: ENTERED");
+    
     if ([segue.identifier isEqualToString:@"showJokeDetail"]) {
+        NSLog(@"prepareForSegue: ENTERED showJokeDetail");
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         JokeDetailViewController *destViewController = segue.destinationViewController;
         Joke *joke = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
-        //destViewController.jokeName = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
-        
-        // changed for core data, this worked prior
-        //destViewController.jokeName = joke.description;
-        
         destViewController.jokeName = joke.theJoke;
-        //destViewController.jokeID = joke.id;
-        
-        
-        //destViewController.joke = joke;
+
     }
     
     if ([segue.identifier isEqualToString:@"showSearchDetail"]) {
-       // NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSLog(@"prepareForSegue: ENTERED showSearchDetail");
+        NSLog(@"text : %@",self.CaptureInformation.text);
         JokeSearchViewController *destViewController = segue.destinationViewController;
-        //Joke *joke = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
-        //destViewController.jokeName = [[jokeSvc retrieveAllJokes] objectAtIndex:indexPath.row];
-        destViewController.jokeID = self.jokeID.text;
-        //destViewController.joke = joke;
+        destViewController.jokeID = self.CaptureInformation.text;
+
     }
 }
 

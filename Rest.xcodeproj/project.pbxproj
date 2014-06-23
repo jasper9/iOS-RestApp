@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C04BF411957C5AD00CE9E37 /* people_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C04BF401957C5AD00CE9E37 /* people_@2x.png */; };
 		0C32092F195655C400A7F04E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32092E195655C400A7F04E /* CoreData.framework */; };
 		0C3209321956562100A7F04E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C3209301956562100A7F04E /* Model.xcdatamodeld */; };
 		0C320935195656F500A7F04E /* JokeSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C320934195656F500A7F04E /* JokeSvcCoreData.m */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C04BF401957C5AD00CE9E37 /* people_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "people_@2x.png"; sourceTree = "<group>"; };
 		0C32092E195655C400A7F04E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0C3209311956562100A7F04E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0C320933195656F500A7F04E /* JokeSvcCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcCoreData.h; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		0CB8C39A194D246A00ACFA8D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C04BF401957C5AD00CE9E37 /* people_@2x.png */,
 				0CB8C3A3194D24E600ACFA8D /* magnifying_glass@2x.png */,
 				0CB8C3A1194D24DF00ACFA8D /* cog_01@2x.png */,
 				0CB8C39F194D24D800ACFA8D /* icndb_dot_com.png */,
@@ -316,6 +319,7 @@
 				0CB8C3A0194D24D800ACFA8D /* icndb_dot_com.png in Resources */,
 				0CB8C39E194D24CA00ACFA8D /* icndb-logo-150x150.png in Resources */,
 				0CB10304192DB58B006824EB /* Images.xcassets in Resources */,
+				0C04BF411957C5AD00CE9E37 /* people_@2x.png in Resources */,
 				0CB102F6192DB58B006824EB /* InfoPlist.strings in Resources */,
 				0CB8C39C194D24C000ACFA8D /* icndb_dot_com smaller.png in Resources */,
 				0C50BDFC1932A5E20005C7C3 /* README.md in Resources */,

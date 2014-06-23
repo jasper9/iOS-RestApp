@@ -14,7 +14,9 @@
 @property (nonatomic, strong) IBOutlet UILabel *greetingContent;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) IBOutlet UITextField *jokeID;
+
+@property (strong, nonatomic) IBOutlet UITextField *CaptureInformation;
+@property (strong, nonatomic) IBOutlet UIButton *SendInformation;
 
 - (IBAction)fetchGreeting;
 

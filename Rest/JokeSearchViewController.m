@@ -30,16 +30,85 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"JokeSearchViewController : viewDidLoad : ENTERED");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //jokeLabel.text = jokeID;
+    
     
     CGRect labelFrame = CGRectMake(20, 300, 280, 150);
     UILabel *myLabel = [[UILabel alloc] initWithFrame:labelFrame];
     //[myLabel setBackgroundColor:[UIColor orangeColor]];
     
-    NSString *labelText = jokeID;
+    // // NSString *labelText = jokeID;
     //NSString *labelText = @"this is a test";
+    NSString *labelText = jokeID;
+    
+    
+    
+    
+    
+    // ==================================================
+    // this is where i'm working
+    
+    NSURL *url = [NSURL URLWithString:@"http://api.icndb.com/jokes/random"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *data, NSError *connectionError)
+     {
+         if (data.length > 0 && connectionError == nil)
+         {
+             
+             id greeting = [NSJSONSerialization JSONObjectWithData:data
+                                                           options:0
+                                                             error:NULL];
+             
+             NSLog(@"Greeting: %@", greeting);
+             id values = [greeting valueForKey:@"value"];
+             NSLog(@"Values: %@", values);
+             id theId = [values valueForKey:@"id"];
+             NSLog(@"ID: %@", theId);
+             NSString *theJoke = [values valueForKey:@"joke"];
+             NSLog(@"JOKE: %@", theJoke);
+             
+             self.greetingId.text = [NSString stringWithFormat:@"%@", theId];
+             self.greetingContent.text = theJoke;
+             
+             Joke *joke = [jokeSvc createManagedJoke];
+             
+             NSDate *now = [[NSDate alloc] init];
+             NSLog(@"NOW: %@", now);
+             
+             joke.theJoke = theJoke;
+             joke.id = theId;
+             joke.datetime = now;
+             
+             
+             [self.tableView reloadData];
+             
+             
+             
+             //self.greetingId.text = [values valueForKey:@"id"];
+             //id forecastday = [simpleforecast valueForKey:@"forecastday"];
+             //self.greetingId.text = [[theJoke objectForKey:@"id"] stringValue];
+             //self.greetingContent.text = [theJoke objectForKey:@"joke"];
+             
+             
+             
+         }
+     }];
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+     // ==================================================
+    
     [myLabel setText:labelText];
     [myLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0]];
     // Tell the label to use an unlimited number of lines

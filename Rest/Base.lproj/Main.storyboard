@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Rest View Controller - Hello Chuck Norris: Random-->
+        <!--Rest View Controller - Hello Chuck Norris-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="RestViewController" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                             <constraint firstItem="OeW-Oa-vCV" firstAttribute="top" secondItem="H3Z-nH-fBY" secondAttribute="bottom" constant="101" id="u00-4u-bR7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hello Chuck Norris: Random" id="Z00-W1-z0r"/>
+                    <navigationItem key="navigationItem" title="Hello Chuck Norris" id="Z00-W1-z0r"/>
                     <connections>
                         <outlet property="tableView" destination="H3Z-nH-fBY" id="763-ua-QGO"/>
                     </connections>
@@ -132,11 +132,108 @@
             </objects>
             <point key="canvasLocation" x="1647" y="32"/>
         </scene>
-        <!--Navigation Controller - Random-->
+        <!--Navigation Controller - Personalized-->
+        <scene sceneID="ruo-Ah-RD7">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="HXf-34-KmX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Personalized" image="people_.png" id="KgJ-jS-iHC" userLabel="Name" colorLabel="IBBuiltInLabel-Yellow"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UUV-JS-TK0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pJ-H3-a5b" kind="relationship" relationship="rootViewController" id="Pr7-1U-Qka"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crB-9p-3JS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="-582"/>
+        </scene>
+        <!--Rest View Controller - Hello Chuck Norris: Personalized-->
+        <scene sceneID="YeG-vb-8Uv">
+            <objects>
+                <viewController id="9pJ-H3-a5b" customClass="RestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C6H-QL-eRh"/>
+                        <viewControllerLayoutGuide type="bottom" id="SaV-ja-JOl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9fZ-bw-JEL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGY-bc-kIx" userLabel="jokeID">
+                                <rect key="frame" x="105" y="162" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nsI-V3-pKX" id="ADR-W5-7wG"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qsg-Vk-HwB">
+                                <rect key="frame" x="73" y="215" width="168" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Create Joke">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="HelveticaNeue-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="fetchGreeting" destination="vXZ-lx-hvc" eventType="touchUpInside" id="15f-1H-Hzx"/>
+                                    <segue destination="fOl-Gu-hu2" kind="push" id="wsA-t0-He0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-Ch-fft">
+                                <rect key="frame" x="54" y="166" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter the name to use for a personalized joke" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0w-Tc-AZ8">
+                                <rect key="frame" x="7" y="133" width="306" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello Chuck Norris: Personalized" id="UKe-Ld-p5U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ml-Fl-7pO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="-550"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bMV-Mt-Z9R">
+            <objects>
+                <viewController id="fOl-Gu-hu2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pij-iH-Oms"/>
+                        <viewControllerLayoutGuide type="bottom" id="PLX-SH-twB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0kQ-me-8JS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MNa-mX-hzj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUF-BA-F7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="-549"/>
+        </scene>
+        <!--Navigation Controller - Saved-->
         <scene sceneID="Lmo-ya-EST">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tr4-rm-Fq1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Random" image="cog_01.png" id="nSl-Nt-bjo"/>
+                    <tabBarItem key="tabBarItem" title="Saved" image="cog_01.png" id="nSl-Nt-bjo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kc4-Nt-yLK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -151,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="598" y="32"/>
         </scene>
-        <!--View Controller - Hello Chuck Norris: Search-->
+        <!--Rest View Controller - Hello Chuck Norris: Search-->
         <scene sceneID="Hyu-bg-NNg">
             <objects>
-                <viewController id="nsI-V3-pKX" sceneMemberID="viewController">
+                <viewController id="nsI-V3-pKX" customClass="RestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tSv-3w-SNa"/>
                         <viewControllerLayoutGuide type="bottom" id="9q5-ka-3WS"/>
@@ -181,7 +278,7 @@
                                 <rect key="frame" x="130" y="332" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-eD-T9B" userLabel="jokeID">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-eD-T9B" userLabel="CaptureInformation">
                                 <rect key="frame" x="98" y="148" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -248,6 +345,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hello Chuck Norris: Search" id="nrD-CF-Yz1"/>
+                    <connections>
+                        <outlet property="CaptureInformation" destination="aPn-eD-T9B" id="Yb4-wm-KIY"/>
+                        <outlet property="SendInformation" destination="BxD-O6-WYg" id="Ovr-eq-LR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ygd-cW-8Gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +362,7 @@
                         <viewControllerLayoutGuide type="top" id="sYf-kN-YQ6"/>
                         <viewControllerLayoutGuide type="bottom" id="yGk-yY-oAp"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="y1R-xl-yC5" userLabel="jokeID">
+                    <view key="view" contentMode="scaleToFill" id="y1R-xl-yC5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -273,9 +374,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="jokeID" value=""/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Hello Chuck Norris: Search Output" id="ojI-tr-aaI"/>
                 </viewController>
@@ -295,12 +393,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="tr4-rm-Fq1" kind="relationship" relationship="viewControllers" id="kFL-ih-Nvv"/>
+                        <segue destination="HXf-34-KmX" kind="relationship" relationship="viewControllers" id="ePL-ld-PYD"/>
                         <segue destination="3O6-Vt-3g9" kind="relationship" relationship="viewControllers" id="YQ7-QH-YDL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQX-35-ihc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72" y="32"/>
+            <point key="canvasLocation" x="-16" y="32"/>
         </scene>
         <!--Navigation Controller - Search-->
         <scene sceneID="cix-sQ-VfL">
@@ -326,6 +425,7 @@
         <image name="cog_01.png" width="26" height="26"/>
         <image name="icndb_dot_com smaller.png" width="147" height="72"/>
         <image name="magnifying_glass.png" width="26" height="26"/>
+        <image name="people_.png" width="26" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
