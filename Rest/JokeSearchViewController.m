@@ -41,7 +41,7 @@
     
     // // NSString *labelText = jokeID;
     //NSString *labelText = @"this is a test";
-    NSString *labelText = jokeID;
+    // NSString *labelText = jokeID; <----------------------------------
     
     
     
@@ -49,8 +49,11 @@
     
     // ==================================================
     // this is where i'm working
+    NSString *myURL = @"http://api.icndb.com/jokes/";
     
-    NSURL *url = [NSURL URLWithString:@"http://api.icndb.com/jokes/random"];
+    NSString *myURL_full = [myURL stringByAppendingString:jokeID];
+    
+    NSURL *url = [NSURL URLWithString:myURL_full];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
@@ -72,20 +75,36 @@
              NSString *theJoke = [values valueForKey:@"joke"];
              NSLog(@"JOKE: %@", theJoke);
              
-             self.greetingId.text = [NSString stringWithFormat:@"%@", theId];
-             self.greetingContent.text = theJoke;
+             NSString *labelText;
+             if (theJoke.length > 0)
+             {
+                 labelText = theJoke;
+ 
+             }
+             else
+             {
+                 labelText = @"Sorry, that joke was not found.";
+             }
+             [myLabel setText:labelText];
+             [myLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0]];
+             [myLabel setNumberOfLines:0];
+             [myLabel sizeToFit];
+             [self.view addSubview:myLabel];
              
-             Joke *joke = [jokeSvc createManagedJoke];
+             //self.greetingId.text = [NSString stringWithFormat:@"%@", theId];
+             //self.greetingContent.text = theJoke;
+             
+             //Joke *joke = [jokeSvc createManagedJoke];
              
              NSDate *now = [[NSDate alloc] init];
              NSLog(@"NOW: %@", now);
              
-             joke.theJoke = theJoke;
-             joke.id = theId;
-             joke.datetime = now;
+             //joke.theJoke = theJoke;
+             //joke.id = theId;
+             //joke.datetime = now;
              
              
-             [self.tableView reloadData];
+             //[self.tableView reloadData];
              
              
              
@@ -109,13 +128,8 @@
     
      // ==================================================
     
-    [myLabel setText:labelText];
-    [myLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:18.0]];
-    // Tell the label to use an unlimited number of lines
-    [myLabel setNumberOfLines:0];
-    [myLabel sizeToFit];
     
-    [self.view addSubview:myLabel];
+
     
     
 }
