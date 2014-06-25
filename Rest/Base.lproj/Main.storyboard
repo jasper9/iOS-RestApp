@@ -123,10 +123,33 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uog-zM-V7h" userLabel="btnFacebookSharing">
+                                <rect key="frame" x="5" y="348" width="134" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share on Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFacebookSharing_Clicked2:" destination="Z58-Z2-AdL" eventType="touchUpInside" id="JZE-aK-ch3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amP-F3-YNe">
+                                <rect key="frame" x="179" y="348" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share on Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnTwitterSharing_Clicked:" destination="Z58-Z2-AdL" eventType="touchUpInside" id="Nfo-Cb-BRR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hello Chuck Norris: Details" id="ZLv-q8-KUD"/>
+                    <connections>
+                        <outlet property="btnFacebookSharing_Clicked" destination="Uog-zM-V7h" id="E4d-NP-eJF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebO-OV-9zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,16 +184,32 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGY-bc-kIx" userLabel="jokeID">
-                                <rect key="frame" x="105" y="162" width="136" height="30"/>
+                                <rect key="frame" x="139" y="162" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="dismissKeyboard:" destination="9pJ-H3-a5b" eventType="touchDragOutside" id="2GK-M5-Ehw"/>
+                                    <action selector="dismissKeyboard:" destination="9pJ-H3-a5b" eventType="touchUpOutside" id="2H8-h2-fGm"/>
+                                    <action selector="dismissKeyboard:" destination="9pJ-H3-a5b" eventType="editingDidEndOnExit" id="2Ld-0S-42f"/>
+                                    <action selector="dismissKeyboard:" destination="9pJ-H3-a5b" eventType="editingDidEnd" id="Yn0-sV-SGJ"/>
+                                    <action selector="dismissKeyboard:" destination="9pJ-H3-a5b" eventType="valueChanged" id="djC-ho-eeR"/>
                                     <outlet property="delegate" destination="nsI-V3-pKX" id="ADR-W5-7wG"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-Jv-hRE" userLabel="jokeID">
+                                <rect key="frame" x="139" y="200" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="9pJ-H3-a5b" eventType="editingDidEndOnExit" id="A04-FM-Zmf"/>
+                                    <action selector="dismissKeyboard:" destination="9pJ-H3-a5b" eventType="touchUpOutside" id="wDA-ra-ufC"/>
+                                    <outlet property="delegate" destination="nsI-V3-pKX" id="Po4-H6-ulG"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qsg-Vk-HwB">
-                                <rect key="frame" x="73" y="215" width="168" height="33"/>
+                                <rect key="frame" x="83" y="274" width="168" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,11 +225,17 @@
                                 </state>
                                 <connections>
                                     <action selector="fetchGreeting" destination="vXZ-lx-hvc" eventType="touchUpInside" id="15f-1H-Hzx"/>
-                                    <segue destination="fOl-Gu-hu2" kind="push" id="wsA-t0-He0"/>
+                                    <segue destination="fOl-Gu-hu2" kind="push" identifier="showPersonalizedDetail" id="JBX-1j-7Ta"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-Ch-fft">
-                                <rect key="frame" x="54" y="166" width="43" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-Ch-fft">
+                                <rect key="frame" x="54" y="166" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-JD-4mc">
+                                <rect key="frame" x="54" y="203" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -205,15 +250,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hello Chuck Norris: Personalized" id="UKe-Ld-p5U"/>
+                    <connections>
+                        <outlet property="CaptureInformation2" destination="MGY-bc-kIx" id="5vL-re-yYW"/>
+                        <outlet property="CaptureInformation_first" destination="MGY-bc-kIx" id="iso-aH-ONx"/>
+                        <outlet property="CaptureInformation_last" destination="3Xc-Jv-hRE" id="Vd6-FN-I4L"/>
+                        <outlet property="SendInformation2" destination="Qsg-Vk-HwB" id="E7w-gc-ngA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ml-Fl-7pO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1111" y="-550"/>
         </scene>
-        <!--View Controller-->
+        <!--Personalized View Controller - Hello Chuck Norris: Personalized-->
         <scene sceneID="bMV-Mt-Z9R">
             <objects>
-                <viewController id="fOl-Gu-hu2" sceneMemberID="viewController">
+                <viewController id="fOl-Gu-hu2" customClass="PersonalizedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pij-iH-Oms"/>
                         <viewControllerLayoutGuide type="bottom" id="PLX-SH-twB"/>
@@ -221,13 +272,68 @@
                     <view key="view" contentMode="scaleToFill" id="0kQ-me-8JS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Joke:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXz-PS-h2U">
+                                <rect key="frame" x="30" y="116" width="187" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBq-zQ-TXr">
+                                <rect key="frame" x="76" y="328" width="168" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save Joke">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="HelveticaNeue-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="fetchGreeting" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sIk-qu-jyK"/>
+                                    <segue destination="3aI-Hu-j1z" kind="push" identifier="SavePersonalized" id="zRa-B7-fUz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MNa-mX-hzj"/>
+                    <navigationItem key="navigationItem" title="Hello Chuck Norris: Personalized" id="MNa-mX-hzj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUF-BA-F7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1519" y="-549"/>
+        </scene>
+        <!--Personalized Save View Controller - Hello Chuck Norris: Personalized-->
+        <scene sceneID="4yk-dW-6pt">
+            <objects>
+                <viewController id="3aI-Hu-j1z" customClass="PersonalizedSaveViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VgS-Cd-RIT"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZfR-tF-ICI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m0e-2i-ts7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lP-ff-WcL">
+                                <rect key="frame" x="133" y="155" width="187" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello Chuck Norris: Personalized" id="aA1-zV-c9Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0f-k3-U1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="-550"/>
         </scene>
         <!--Navigation Controller - Saved-->
         <scene sceneID="Lmo-ya-EST">
@@ -288,7 +394,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BxD-O6-WYg">
-                                <rect key="frame" x="66" y="201" width="168" height="33"/>
+                                <rect key="frame" x="82" y="207" width="168" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -303,7 +409,7 @@
                                 </state>
                                 <connections>
                                     <action selector="fetchGreeting" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7sP-Ye-5Br"/>
-                                    <segue destination="uVu-KC-X8A" kind="push" identifier="showSearchDetail" id="6WL-ND-uLU"/>
+                                    <segue destination="uVu-KC-X8A" kind="push" identifier="showSearchDetail" id="nWk-Sn-h8T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCk-NY-ycq">
@@ -318,19 +424,11 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This use case is not finished yet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amR-my-iTM">
-                                <rect key="frame" x="52" y="306" width="217" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amR-my-iTM">
+                                <rect key="frame" x="52" y="306" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(not finished, as in will crash)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWp-oa-XCX">
-                                <rect key="frame" x="60" y="328" width="201" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

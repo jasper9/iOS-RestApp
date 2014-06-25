@@ -16,6 +16,7 @@
 
 #import "JokeDetailViewController.h"
 #import "JokeSearchViewController.h"
+#import "PersonalizedViewController.h"
 
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "Reachability.h"
@@ -29,6 +30,9 @@
 
 @synthesize CaptureInformation;
 @synthesize SendInformation;
+
+@synthesize CaptureInformation_first;
+@synthesize CaptureInformation_last;
 
 //JokeSvcCache *jokeSvc = nil;
 //JokeSvcArchive *jokeSvc = nil;
@@ -130,7 +134,15 @@ JokeSvcCoreData *jokeSvc = nil;
 	//jokeSvc = [[JokeSvcArchive alloc] init];
     //jokeSvc = [[JokeSvcSQLite alloc] init];
     jokeSvc = [[JokeSvcCoreData alloc] init];
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+     NSLog(@"Title %@", self.navigationItem.title );
+    if ([self.navigationItem.title  isEqual: @"Hello Chuck Norris"]) {
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
+        
+    }
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -195,9 +207,7 @@ JokeSvcCoreData *jokeSvc = nil;
     // from: http://stackoverflow.com/questions/9661690/user-regular-expression-to-find-replace-substring-in-nsstring
     NSError *error = nil;
 
-    
-    // removing for core data use, this worked prior
-        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"&quot;" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"&quot;" options:NSRegularExpressionCaseInsensitive error:&error];
     NSString *modifiedString = [regex stringByReplacingMatchesInString:joke.theJoke options:0 range:NSMakeRange(0, [joke.theJoke length]) withTemplate:@"\""];
     joke.theJoke = modifiedString;
     
@@ -253,6 +263,29 @@ JokeSvcCoreData *jokeSvc = nil;
         destViewController.jokeID = self.CaptureInformation.text;
 
     }
+    
+    if ([segue.identifier isEqualToString:@"showPersonalizedDetail"]) {
+        
+        NSLog(@"prepareForSegue: ENTERED showPersonalizedDetail");
+        NSLog(@"text1 : %@",self.CaptureInformation_first.text);
+        NSLog(@"text2 : %@",self.CaptureInformation_last.text);
+        PersonalizedViewController *destViewController = segue.destinationViewController;
+        destViewController.nameFirst = self.CaptureInformation_first.text;
+        destViewController.nameLast = self.CaptureInformation_last.text;
+        [self.view endEditing:YES];
+    }
+    
+    
+    // THIS ONE NEEDS WORK TO MASSAGE THE VARIABLES
+    if ([segue.identifier isEqualToString:@"SavePersonalized"]) {
+        NSLog(@"prepareForSegue: ENTERED SavePersonalized");
+        NSLog(@"id : %@",self.CaptureInformation_first.text);
+        NSLog(@"text : %@",self.CaptureInformation_last.text);
+        PersonalizedViewController *destViewController = segue.destinationViewController;
+        destViewController.nameFirst = self.CaptureInformation_first.text;
+        destViewController.nameLast = self.CaptureInformation_last.text;
+    }
+    //
 }
 
 - (BOOL)connected
@@ -261,6 +294,13 @@ JokeSvcCoreData *jokeSvc = nil;
     NetworkStatus networkStatus = [reachability currentReachabilityStatus];
     return !(networkStatus == NotReachable);
 }
+
+
+-(IBAction)dismissKeyboard:(id)sender
+{
+    [sender resignFirstResponder];
+}
+
 
 
 @end

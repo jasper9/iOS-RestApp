@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C04BF411957C5AD00CE9E37 /* people_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C04BF401957C5AD00CE9E37 /* people_@2x.png */; };
+		0C1FB5511959170E0060285E /* PersonalizedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FB5501959170E0060285E /* PersonalizedViewController.m */; };
 		0C32092F195655C400A7F04E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32092E195655C400A7F04E /* CoreData.framework */; };
 		0C3209321956562100A7F04E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C3209301956562100A7F04E /* Model.xcdatamodeld */; };
 		0C320935195656F500A7F04E /* JokeSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C320934195656F500A7F04E /* JokeSvcCoreData.m */; };
@@ -38,6 +39,7 @@
 		0CB8C3A0194D24D800ACFA8D /* icndb_dot_com.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB8C39F194D24D800ACFA8D /* icndb_dot_com.png */; };
 		0CB8C3A2194D24DF00ACFA8D /* cog_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB8C3A1194D24DF00ACFA8D /* cog_01@2x.png */; };
 		0CB8C3A4194D24E600ACFA8D /* magnifying_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB8C3A3194D24E600ACFA8D /* magnifying_glass@2x.png */; };
+		0CDC8F15195A5B8900E71605 /* PersonalizedSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC8F14195A5B8900E71605 /* PersonalizedSaveViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		0C04BF401957C5AD00CE9E37 /* people_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "people_@2x.png"; sourceTree = "<group>"; };
+		0C1FB54F1959170E0060285E /* PersonalizedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalizedViewController.h; sourceTree = "<group>"; };
+		0C1FB5501959170E0060285E /* PersonalizedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalizedViewController.m; sourceTree = "<group>"; };
 		0C32092E195655C400A7F04E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0C3209311956562100A7F04E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0C320933195656F500A7F04E /* JokeSvcCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeSvcCoreData.h; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		0CB8C39F194D24D800ACFA8D /* icndb_dot_com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icndb_dot_com.png; sourceTree = "<group>"; };
 		0CB8C3A1194D24DF00ACFA8D /* cog_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cog_01@2x.png"; sourceTree = "<group>"; };
 		0CB8C3A3194D24E600ACFA8D /* magnifying_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying_glass@2x.png"; sourceTree = "<group>"; };
+		0CDC8F13195A5B8900E71605 /* PersonalizedSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalizedSaveViewController.h; sourceTree = "<group>"; };
+		0CDC8F14195A5B8900E71605 /* PersonalizedSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalizedSaveViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,10 @@
 				0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */,
 				0C81C8F51942A88D009C9D33 /* JokeSearchViewController.h */,
 				0C81C8F61942A88D009C9D33 /* JokeSearchViewController.m */,
+				0C1FB54F1959170E0060285E /* PersonalizedViewController.h */,
+				0C1FB5501959170E0060285E /* PersonalizedViewController.m */,
+				0CDC8F13195A5B8900E71605 /* PersonalizedSaveViewController.h */,
+				0CDC8F14195A5B8900E71605 /* PersonalizedSaveViewController.m */,
 				0CB10300192DB58B006824EB /* RestViewController.h */,
 				0CB10301192DB58B006824EB /* RestViewController.m */,
 				0CB10303192DB58B006824EB /* Images.xcassets */,
@@ -345,9 +355,11 @@
 			files = (
 				0CB102FC192DB58B006824EB /* RestAppDelegate.m in Sources */,
 				0C81C8F71942A88D009C9D33 /* JokeSearchViewController.m in Sources */,
+				0C1FB5511959170E0060285E /* PersonalizedViewController.m in Sources */,
 				0C32094119565AE700A7F04E /* Joke.m in Sources */,
 				0C320935195656F500A7F04E /* JokeSvcCoreData.m in Sources */,
 				0CB10302192DB58B006824EB /* RestViewController.m in Sources */,
+				0CDC8F15195A5B8900E71605 /* PersonalizedSaveViewController.m in Sources */,
 				0C43311F193ABE0B00335BD4 /* JokeDetailViewController.m in Sources */,
 				0C69E98119480F2B000719AC /* Reachability.m in Sources */,
 				0C3209321956562100A7F04E /* Model.xcdatamodeld in Sources */,

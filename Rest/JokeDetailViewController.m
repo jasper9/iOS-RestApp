@@ -9,6 +9,7 @@
 #import "JokeDetailViewController.h"
 #import "Joke.h"
 #import "JokeSvcCache.h"
+#import <Social/Social.h>
 
 @interface JokeDetailViewController ()
 
@@ -35,7 +36,7 @@
     // Do any additional setup after loading the view.
     jokeLabel.text = jokeName;
     
-    CGRect labelFrame = CGRectMake(20, 300, 280, 150);
+    CGRect labelFrame = CGRectMake(20, 200, 280, 150);
     UILabel *myLabel = [[UILabel alloc] initWithFrame:labelFrame];
     //[myLabel setBackgroundColor:[UIColor orangeColor]];
     
@@ -68,4 +69,47 @@
 }
 */
 
+- (IBAction)btnTwitterSharing_Clicked:(id)sender {
+    NSString *labelText = jokeName;
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
+                                                  composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheetOBJ setInitialText:labelText];
+        [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
+    }
+    else
+    {   // from http://www.raywenderlich.com/21558/beginning-twitter-tutorial-updated-for-ios-6
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:@"You cannot send a tweet right now, make sure you have at least one Twitter account configured."
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+- (IBAction)btnFacebookSharing_Clicked2:(id)sender {
+    NSString *labelText = jokeName;
+    
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        
+        [fbSheetOBJ setInitialText:labelText];
+        [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
+    }
+    else
+    {   // from http://www.raywenderlich.com/21558/beginning-twitter-tutorial-updated-for-ios-6
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:@"You cannot post right now, make sure you have a Facebook account configured."
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+    
+}
 @end

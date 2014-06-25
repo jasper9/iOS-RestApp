@@ -14,4 +14,12 @@
 @property (nonatomic, strong) NSString *jokeName;
 @property (nonatomic) int *jokeID;
 
+// not sure it won't work without this.
+// i think i accidentially created this IBOutlet then deleted
+// something still wants it??
+@property (nonatomic, strong) IBOutlet UILabel *btnFacebookSharing_Clicked;
+
+- (IBAction)btnFacebookSharing_Clicked2:(id)sender;
+- (IBAction)btnTwitterSharing_Clicked:(id)sender;
+
 @end

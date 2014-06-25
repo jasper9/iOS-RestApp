@@ -18,6 +18,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *CaptureInformation;
 @property (strong, nonatomic) IBOutlet UIButton *SendInformation;
 
+@property (strong, nonatomic) IBOutlet UITextField *CaptureInformation2;
+@property (strong, nonatomic) IBOutlet UITextField *CaptureInformation_first;
+@property (strong, nonatomic) IBOutlet UITextField *CaptureInformation_last;
+
+@property (strong, nonatomic) IBOutlet UIButton *SendInformation2;
+
 - (IBAction)fetchGreeting;
 
 @end
