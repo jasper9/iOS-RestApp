@@ -279,26 +279,6 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpF-cg-cFQ" userLabel="btnFacebookSharing">
-                                <rect key="frame" x="15" y="375" width="134" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share on Facebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnFacebookSharing_Clicked2:" destination="Z58-Z2-AdL" eventType="touchUpInside" id="Og9-ns-8DG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71A-9q-ZCV">
-                                <rect key="frame" x="189" y="375" width="111" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share on Twitter">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnTwitterSharing_Clicked:" destination="Z58-Z2-AdL" eventType="touchUpInside" id="6vl-Rb-COw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -465,12 +445,112 @@
                     <connections>
                         <segue destination="tr4-rm-Fq1" kind="relationship" relationship="viewControllers" id="kFL-ih-Nvv"/>
                         <segue destination="HXf-34-KmX" kind="relationship" relationship="viewControllers" id="ePL-ld-PYD"/>
+                        <segue destination="pod-Eo-Gfy" kind="relationship" relationship="viewControllers" id="x2T-wF-C32"/>
                         <segue destination="3O6-Vt-3g9" kind="relationship" relationship="viewControllers" id="YQ7-QH-YDL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQX-35-ihc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="32"/>
+            <point key="canvasLocation" x="-6" y="32"/>
+        </scene>
+        <!--Navigation Controller - Rapid-->
+        <scene sceneID="8KN-2m-QhF">
+            <objects>
+                <navigationController title="Rapid" definesPresentationContext="YES" id="pod-Eo-Gfy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rapid" image="repeat.png" id="Qpn-fK-zCP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tmg-a6-3Ul">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6yc-vE-g9V" kind="relationship" relationship="rootViewController" id="QOf-jc-OB4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lo4-X8-Moj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="1322"/>
+        </scene>
+        <!--Rest View Controller - Hello Chuck Norris: Rapid Generation-->
+        <scene sceneID="u1Y-dk-yT8">
+            <objects>
+                <viewController id="6yc-vE-g9V" customClass="RestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aTC-NL-EmT"/>
+                        <viewControllerLayoutGuide type="bottom" id="z9X-6a-lyF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q5z-nQ-laB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many jokes do you want?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjk-CX-3QS">
+                                <rect key="frame" x="57" y="140" width="207" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dmj-tG-yfL">
+                                <rect key="frame" x="100" y="176" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQE-RJ-gkb">
+                                <rect key="frame" x="64" y="231" width="168" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Get Jokes">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="HelveticaNeue-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="fetchGreeting" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dpQ-lD-czK"/>
+                                    <segue destination="H0x-ec-C27" kind="push" identifier="ShowRapidJokes" id="fal-q3-gg4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello Chuck Norris: Rapid Generation" id="6Qz-GQ-FKX"/>
+                    <connections>
+                        <outlet property="Count" destination="Dmj-tG-yfL" id="LdE-hk-dQ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdh-lg-eoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="1322"/>
+        </scene>
+        <!--Rapid View Controller - Hello Chuck Norris: Rapid Output-->
+        <scene sceneID="JY7-n7-fbY">
+            <objects>
+                <viewController id="H0x-ec-C27" customClass="RapidViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OjX-LT-nKm"/>
+                        <viewControllerLayoutGuide type="bottom" id="HSh-zB-sya"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SOe-lv-vMO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jokes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP5-om-8Ni">
+                                <rect key="frame" x="8" y="72" width="187" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello Chuck Norris: Rapid Output" id="zN8-rG-3mE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2LC-ng-vz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="1311"/>
         </scene>
         <!--Navigation Controller - Search-->
         <scene sceneID="cix-sQ-VfL">
@@ -497,6 +577,7 @@
         <image name="icndb_dot_com smaller.png" width="147" height="72"/>
         <image name="magnifying_glass.png" width="26" height="26"/>
         <image name="people_.png" width="26" height="26"/>
+        <image name="repeat.png" width="26" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *CaptureInformation_last;
 
 @property (strong, nonatomic) IBOutlet UIButton *SendInformation2;
+@property (strong, nonatomic) IBOutlet UITextField *Count;
 
 - (IBAction)fetchGreeting;
 

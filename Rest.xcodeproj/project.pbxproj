@@ -13,6 +13,8 @@
 		0C3209321956562100A7F04E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C3209301956562100A7F04E /* Model.xcdatamodeld */; };
 		0C320935195656F500A7F04E /* JokeSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C320934195656F500A7F04E /* JokeSvcCoreData.m */; };
 		0C32094119565AE700A7F04E /* Joke.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32094019565AE700A7F04E /* Joke.m */; };
+		0C3A5213195BBCB500D73141 /* repeat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C3A5212195BBCB500D73141 /* repeat@2x.png */; };
+		0C3A5216195BD33E00D73141 /* RapidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3A5215195BD33E00D73141 /* RapidViewController.m */; };
 		0C43311F193ABE0B00335BD4 /* JokeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */; };
 		0C50BDFC1932A5E20005C7C3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C50BDFB1932A5E20005C7C3 /* README.md */; };
 		0C69E97E19480E2A000719AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C69E97D19480E2A000719AC /* SystemConfiguration.framework */; };
@@ -62,6 +64,9 @@
 		0C320934195656F500A7F04E /* JokeSvcCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeSvcCoreData.m; sourceTree = "<group>"; };
 		0C32093F19565AE700A7F04E /* Joke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joke.h; sourceTree = "<group>"; };
 		0C32094019565AE700A7F04E /* Joke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Joke.m; sourceTree = "<group>"; };
+		0C3A5212195BBCB500D73141 /* repeat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "repeat@2x.png"; sourceTree = "<group>"; };
+		0C3A5214195BD33E00D73141 /* RapidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RapidViewController.h; sourceTree = "<group>"; };
+		0C3A5215195BD33E00D73141 /* RapidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RapidViewController.m; sourceTree = "<group>"; };
 		0C43311D193ABE0B00335BD4 /* JokeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeDetailViewController.h; sourceTree = "<group>"; };
 		0C43311E193ABE0B00335BD4 /* JokeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeDetailViewController.m; sourceTree = "<group>"; };
 		0C50BDF2193038CB0005C7C3 /* JokeSvc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JokeSvc.h; sourceTree = "<group>"; };
@@ -193,6 +198,8 @@
 				0C1FB5501959170E0060285E /* PersonalizedViewController.m */,
 				0CDC8F13195A5B8900E71605 /* PersonalizedSaveViewController.h */,
 				0CDC8F14195A5B8900E71605 /* PersonalizedSaveViewController.m */,
+				0C3A5214195BD33E00D73141 /* RapidViewController.h */,
+				0C3A5215195BD33E00D73141 /* RapidViewController.m */,
 				0CB10300192DB58B006824EB /* RestViewController.h */,
 				0CB10301192DB58B006824EB /* RestViewController.m */,
 				0CB10303192DB58B006824EB /* Images.xcassets */,
@@ -234,6 +241,7 @@
 		0CB8C39A194D246A00ACFA8D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C3A5212195BBCB500D73141 /* repeat@2x.png */,
 				0C04BF401957C5AD00CE9E37 /* people_@2x.png */,
 				0CB8C3A3194D24E600ACFA8D /* magnifying_glass@2x.png */,
 				0CB8C3A1194D24DF00ACFA8D /* cog_01@2x.png */,
@@ -327,6 +335,7 @@
 				0CB8C3A4194D24E600ACFA8D /* magnifying_glass@2x.png in Resources */,
 				0CB8C3A2194D24DF00ACFA8D /* cog_01@2x.png in Resources */,
 				0CB8C3A0194D24D800ACFA8D /* icndb_dot_com.png in Resources */,
+				0C3A5213195BBCB500D73141 /* repeat@2x.png in Resources */,
 				0CB8C39E194D24CA00ACFA8D /* icndb-logo-150x150.png in Resources */,
 				0CB10304192DB58B006824EB /* Images.xcassets in Resources */,
 				0C04BF411957C5AD00CE9E37 /* people_@2x.png in Resources */,
@@ -364,6 +373,7 @@
 				0C69E98119480F2B000719AC /* Reachability.m in Sources */,
 				0C3209321956562100A7F04E /* Model.xcdatamodeld in Sources */,
 				0CB102F8192DB58B006824EB /* main.m in Sources */,
+				0C3A5216195BD33E00D73141 /* RapidViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

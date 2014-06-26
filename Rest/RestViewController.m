@@ -17,7 +17,7 @@
 #import "JokeDetailViewController.h"
 #import "JokeSearchViewController.h"
 #import "PersonalizedViewController.h"
-
+#import "RapidViewController.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "Reachability.h"
 
@@ -33,7 +33,7 @@
 
 @synthesize CaptureInformation_first;
 @synthesize CaptureInformation_last;
-
+@synthesize Count;
 //JokeSvcCache *jokeSvc = nil;
 //JokeSvcArchive *jokeSvc = nil;
 //JokeSvcSQLite *jokeSvc = nil;
@@ -246,6 +246,7 @@ JokeSvcCoreData *jokeSvc = nil;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     NSLog(@"prepareForSegue: ENTERED");
+    NSLog(@"segue.identifier is %@",segue.identifier);
     
     if ([segue.identifier isEqualToString:@"showJokeDetail"]) {
         NSLog(@"prepareForSegue: ENTERED showJokeDetail");
@@ -277,6 +278,7 @@ JokeSvcCoreData *jokeSvc = nil;
     
     
     // THIS ONE NEEDS WORK TO MASSAGE THE VARIABLES
+    /*
     if ([segue.identifier isEqualToString:@"SavePersonalized"]) {
         NSLog(@"prepareForSegue: ENTERED SavePersonalized");
         NSLog(@"id : %@",self.CaptureInformation_first.text);
@@ -285,7 +287,22 @@ JokeSvcCoreData *jokeSvc = nil;
         destViewController.nameFirst = self.CaptureInformation_first.text;
         destViewController.nameLast = self.CaptureInformation_last.text;
     }
+     */
+    
     //
+    
+    if ([segue.identifier isEqualToString:@"ShowRapidJokes"]) {
+        
+        NSLog(@"prepareForSegue: ENTERED ShowRapidJokes");
+        NSLog(@"count : %@",self.Count.text);
+        
+        RapidViewController *destViewController = segue.destinationViewController;
+        destViewController.Count = self.Count.text;
+        NSLog(@"prepareForSegue: EXITING");
+        [self.view endEditing:YES];
+    }
+    
+    
 }
 
 - (BOOL)connected
