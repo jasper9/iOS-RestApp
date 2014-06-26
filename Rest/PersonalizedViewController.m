@@ -8,8 +8,10 @@
 
 #import "PersonalizedViewController.h"
 #import "Joke.h"
-#import "JokeSvcCache.h"
-
+//#import "JokeSvcCache.h"
+#import "JokeSvcCoreData.h" // added june 21 2014
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "Reachability.h"
 
 @interface PersonalizedViewController ()
 
@@ -20,6 +22,7 @@
 @synthesize nameFirst;
 @synthesize nameLast;
 
+JokeSvcCoreData *jokeSvc2 = nil;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,8 +47,8 @@
     //NSString *labelText = @"this is a test";
     // NSString *labelText = jokeID; <----------------------------------
     
-    
-    
+    // testing
+    jokeSvc2 = [[JokeSvcCoreData alloc] init];
     
     
     // ==================================================
@@ -112,10 +115,14 @@
              //self.greetingId.text = [NSString stringWithFormat:@"%@", theId];
              //self.greetingContent.text = theJoke;
              
-             //Joke *joke = [jokeSvc createManagedJoke];
+             Joke *joke = [jokeSvc2 createManagedJoke];
              
              NSDate *now = [[NSDate alloc] init];
              NSLog(@"NOW: %@", now);
+             
+             joke.theJoke = theJoke;
+             joke.id = theId;
+             joke.datetime = now;
              
              //joke.theJoke = theJoke;
              //joke.id = theId;

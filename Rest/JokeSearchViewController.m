@@ -8,7 +8,7 @@
 
 #import "JokeSearchViewController.h"
 #import "Joke.h"
-#import "JokeSvcCache.h"
+#import "JokeSvcCoreData.h" // added june 21 2014
 
 @interface JokeSearchViewController ()
 
@@ -18,6 +18,7 @@
 
 //@synthesize jokeLabel;
 @synthesize jokeID;
+JokeSvcCoreData *jokeSvc3 = nil;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,14 +36,14 @@
     // Do any additional setup after loading the view.
     
     
-    CGRect labelFrame = CGRectMake(20, 300, 280, 150);
+    CGRect labelFrame = CGRectMake(20, 200, 280, 150);
     UILabel *myLabel = [[UILabel alloc] initWithFrame:labelFrame];
     //[myLabel setBackgroundColor:[UIColor orangeColor]];
     
     // // NSString *labelText = jokeID;
     //NSString *labelText = @"this is a test";
     // NSString *labelText = jokeID; <----------------------------------
-    
+    jokeSvc3 = [[JokeSvcCoreData alloc] init];
     
     
     
@@ -96,22 +97,16 @@
              
              //Joke *joke = [jokeSvc createManagedJoke];
              
+
+             
+             Joke *joke = [jokeSvc3 createManagedJoke];
+             
              NSDate *now = [[NSDate alloc] init];
              NSLog(@"NOW: %@", now);
              
-             //joke.theJoke = theJoke;
-             //joke.id = theId;
-             //joke.datetime = now;
-             
-             
-             //[self.tableView reloadData];
-             
-             
-             
-             //self.greetingId.text = [values valueForKey:@"id"];
-             //id forecastday = [simpleforecast valueForKey:@"forecastday"];
-             //self.greetingId.text = [[theJoke objectForKey:@"id"] stringValue];
-             //self.greetingContent.text = [theJoke objectForKey:@"joke"];
+             joke.theJoke = theJoke;
+             joke.id = theId;
+             joke.datetime = now;
              
              
              
@@ -151,4 +146,5 @@
  }
  */
 
+    
 @end
