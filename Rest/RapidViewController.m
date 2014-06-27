@@ -96,7 +96,7 @@ JokeSvcCoreData *jokeSvc4 = nil;
                  //NSString *eachJoke = [theJoke objectAtIndex:myCounter];
                  //id eachJoke = [values indexOfObject:myCounter];
                  NSString* thisJoke = [eachJoke valueForKey:@"joke"]; //2
-                 NSString* thisID = [eachJoke valueForKey:@"id"]; //2
+                 id thisID = [eachJoke valueForKey:@"id"]; //2
                  
                  NSLog(@"Loop %d: [%@] %@", myCounter, thisID, thisJoke);
             

@@ -296,9 +296,9 @@
 		0CB102E0192DB58A006824EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = Rest;
+				CLASSPREFIX = HelloChuck;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = Spring;
+				ORGANIZATIONNAME = JAAS.CO;
 				TargetAttributes = {
 					0CB102E7192DB58A006824EB = {
 						DevelopmentTeam = A37BU6CJWC;

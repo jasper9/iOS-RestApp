@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Joke.h"
 //#import "JokeSvcArchive.h"
+#import "JokeSvcCoreData.h"
 
 @interface RestTests : XCTestCase
 
@@ -28,28 +29,32 @@
     [super tearDown];
 }
 
-- (void)testJokeSvcArchive
+- (void)testJokeCreation
 {
     //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
     
-    /*
-    NSLog(@"*** Starting testJokeSvcArchive ***");
-    JokeSvcArchive *jokeSvc = [[JokeSvcArchive alloc] init];
+    
+    NSLog(@"*** Starting testJokeCreation ***");
+    JokeSvcCoreData *jokeSvc = [[JokeSvcCoreData alloc] init];
     NSUInteger initialCount = [[jokeSvc retrieveAllJokes] count];
     
-    Joke *joke = [[Joke alloc] init];
-    joke.theJoke = @"This is my test joke 1.";
-    joke.theId = @"42";
+    //Joke *joke = [[Joke alloc] init];
     
-    [jokeSvc createJoke:(Joke *) joke];
+    Joke *joke = [jokeSvc createManagedJoke];
+    
+    NSDate *now = [[NSDate alloc] init];
+    NSLog(@"NOW: %@", now);
+    
+    
+    joke.theJoke = @"This is my test joke 1.";
+    joke.id = [NSNumber numberWithInt:42];
+    joke.datetime = now;
+    
     NSUInteger finalCount = [[jokeSvc retrieveAllJokes] count];
     
     XCTAssertEqual((NSUInteger)initialCount + 1, (NSUInteger)finalCount, @"initial count %lu, final count %lu ", initialCount, (unsigned long)finalCount);
-    */
     
-//  #### HERE START NSLOGS
-    //NSLog(@"*** The Count: %i", count);
-    //NSLog(@"*** Ending testJokeSvcArchive ***");
+    NSLog(@"*** Ending testJokeCreation ***");
     
     
 }
