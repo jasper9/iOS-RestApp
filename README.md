@@ -1,13 +1,8 @@
 This is my HelloWorld iOS app.
 by Jasper9
 
-This app does GET requests to the chuck norris database (http://www.icndb.com)
+This app does GET requests to the chuck norris database (http://www.icndb.com).  That's about all.
 
-Change Log:
-May ? - Initial version, basic GET request is fully working
-May 31 - Added storyboard functionality to show details of each joke
-.. - Added Archive support (and a few other trinkets)
-June 10 - Added check for network reachability using apples example code
 -------------------------------------------------------------------------------------
 Credits 
 
